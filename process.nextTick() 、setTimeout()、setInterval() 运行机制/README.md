@@ -1,4 +1,4 @@
-​    JavaScript是一个单线程的语言，也就是说它同一时间只能执行一段代码，接下来我们通过两个例子说明一下单线程语言和多线程语言的区别。
+    JavaScript是一个单线程的语言，也就是说它同一时间只能执行一段代码，接下来我们通过两个例子说明一下单线程语言和多线程语言的区别。
 
 ## setTimeout()
 
@@ -29,7 +29,7 @@ setTimeout(() => {
 },0);
 console.log(5);
 
-for (let i = 0; i < 10000222200; i++) {}        //一直等待它执行完毕后，才会执行setTimeout的回调。
+for (let i = 0; i < 10000222200; i++) {}        //25：一直等待它执行完毕后，才会执行setTimeout的回调。
 ```
 
 ![img](https://raw.githubusercontent.com/Jameswain/blog/master/process.nextTick()%20%E3%80%81setTimeout()%E3%80%81setInterval()%20%E8%BF%90%E8%A1%8C%E6%9C%BA%E5%88%B6/imgs/762547.png)
