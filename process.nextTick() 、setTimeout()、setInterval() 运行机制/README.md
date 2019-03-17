@@ -36,7 +36,7 @@ for (let i = 0; i < 10000222200; i++) {}        //一直等待它执行完毕后
 
 ​        从运行结果上可以看出，虽然setTimeout - a 是写在代码当最开头，延时时间也为0，但是，它并没有立即执行；而是等主逻辑的代码执行完毕后才进行调用的，当代码运行到25行的时候，由于这里有一个长长的循环，所以这里会阻塞等待一段时间，才会运行到第一个setTimeout。setTimeout的运行顺序是根据你代码中编写的顺序和延时时间决定的，下面通过一张图来说明上述代码的运行机制：
 
-![img](/var/folders/pz/526472sj5cg5ylqblm4zf12c0000gn/T/WizNote/be2a7bf4-3c36-4ed8-8091-5e794855e85a/index_files/452d9c2b-0edf-48b4-b51d-71ccabd4a60e.png)
+![img](https://raw.githubusercontent.com/Jameswain/blog/master/process.nextTick()%20%E3%80%81setTimeout()%E3%80%81setInterval()%20%E8%BF%90%E8%A1%8C%E6%9C%BA%E5%88%B6/imgs/452d9c2b-0edf-48b4-b51d-71ccabd4a60e.png)
 
 ​        从运行结果中，可以看出如果主逻辑代码没有执行完毕，setTimeout的回调函数是永远不会触发的，这就是单线程，它同一时间只能做一件事。
 
