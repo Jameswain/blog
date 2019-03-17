@@ -2,7 +2,7 @@
 
 ## setTimeout()
 
-**setTimeout 代码单线程运行机制：
+**setTimeout 代码单线程运行机制：**
 
 ```javascript
 /**
@@ -32,7 +32,7 @@ console.log(5);
 for (let i = 0; i < 10000222200; i++) {}        //一直等待它执行完毕后，才会执行setTimeout的回调。
 ```
 
-![img](file:///var/folders/pz/526472sj5cg5ylqblm4zf12c0000gn/T/WizNote/be2a7bf4-3c36-4ed8-8091-5e794855e85a/index_files/762547.png)
+![img](https://raw.githubusercontent.com/Jameswain/blog/master/process.nextTick()%20%E3%80%81setTimeout()%E3%80%81setInterval()%20%E8%BF%90%E8%A1%8C%E6%9C%BA%E5%88%B6/imgs/762547.png)
 
 ​        从运行结果上可以看出，虽然setTimeout - a 是写在代码当最开头，延时时间也为0，但是，它并没有立即执行；而是等主逻辑的代码执行完毕后才进行调用的，当代码运行到25行的时候，由于这里有一个长长的循环，所以这里会阻塞等待一段时间，才会运行到第一个setTimeout。setTimeout的运行顺序是根据你代码中编写的顺序和延时时间决定的，下面通过一张图来说明上述代码的运行机制：
 
@@ -74,7 +74,7 @@ console.log(5);
 for (let i = 0; i < 10000222200; i++) {}        //一直等待它执行完毕后，才会执行setTimeout的回调。
 ```
 
-![img](file:///var/folders/pz/526472sj5cg5ylqblm4zf12c0000gn/T/WizNote/be2a7bf4-3c36-4ed8-8091-5e794855e85a/index_files/46885403.png)
+![img](https://raw.githubusercontent.com/Jameswain/blog/master/process.nextTick()%20%E3%80%81setTimeout()%E3%80%81setInterval()%20%E8%BF%90%E8%A1%8C%E6%9C%BA%E5%88%B6/imgs/46885403.png)
 
 从上述运行结果可以看出，即使setTimeout放在主逻辑到最前边，但是它依然是要等到主逻辑到代码完全执行完毕后才执行。
 
@@ -119,7 +119,7 @@ public class Main {
 }
 ```
 
-![img](file:///var/folders/pz/526472sj5cg5ylqblm4zf12c0000gn/T/WizNote/be2a7bf4-3c36-4ed8-8091-5e794855e85a/index_files/3722023.png)
+![img](https://raw.githubusercontent.com/Jameswain/blog/master/process.nextTick()%20%E3%80%81setTimeout()%E3%80%81setInterval()%20%E8%BF%90%E8%A1%8C%E6%9C%BA%E5%88%B6/imgs/3722023.png)
 
 从运行结果上可以看出，多线程的语言，主线程与子线程之间是完全相互独立的，即使主线程中存在大量的计算逻辑，也不会阻塞子线程的运行；子线程之间也是相互独立的，例如：线程1中存在大量计算逻辑并不会影响线程2的正在执行。
 
@@ -160,7 +160,7 @@ for (let i = 0; i < 10000222200; i++) {}        //一直等待它执行完毕后
 
 
 
-![img](file:///var/folders/pz/526472sj5cg5ylqblm4zf12c0000gn/T/WizNote/be2a7bf4-3c36-4ed8-8091-5e794855e85a/index_files/70262924.png)
+![img](https://raw.githubusercontent.com/Jameswain/blog/master/process.nextTick()%20%E3%80%81setTimeout()%E3%80%81setInterval()%20%E8%BF%90%E8%A1%8C%E6%9C%BA%E5%88%B6/imgs/70262924.png)
 
 从运行结果中我们可以发现，即使setTimeout设置的时机要早于process.nextTick()，但是process.nextTick()的执行时机还是要早于setTimeout，这就证明是了process.nextTick() 的执行时机是在任务队列调用之前进行执行的。
 
@@ -190,7 +190,7 @@ console.log('main => 2');
 for (let i = 0; i < 1002222200; i++) {}     // 此处主逻辑会阻塞一段时间进行循环计算，只有主逻辑代码执行完毕后才会调用setInterval
 ```
 
-![img](file:///var/folders/pz/526472sj5cg5ylqblm4zf12c0000gn/T/WizNote/be2a7bf4-3c36-4ed8-8091-5e794855e85a/index_files/71471274.png)
+![img](https://raw.githubusercontent.com/Jameswain/blog/master/process.nextTick()%20%E3%80%81setTimeout()%E3%80%81setInterval()%20%E8%BF%90%E8%A1%8C%E6%9C%BA%E5%88%B6/imgs/71471274.png)
 
 ​        上述代码中同时启动了两个setInterval() 并且它们的回调周期时间都为1000毫秒， 但是从运行结果中我们可以发现这俩setInterval()的回调周期时间远远超出了1000毫秒；造成这种情况的主要有两个地方：
 
