@@ -1,6 +1,6 @@
 ​    webpack-dev-middleware 是express的一个中间件，它的主要作用是以监听模式启动webpack，将webpack编译后的文件输出到内存里，然后将内存的文件输出到epxress服务器上；下面通过一张图片来看一下它的工作原理：
 
-![img](file:///var/folders/pz/526472sj5cg5ylqblm4zf12c0000gn/T/WizNote/e3385b90-1b73-4562-958f-c355f35df2c5/index_files/1e5d0dc8-271d-4e16-861f-d412dad45dc4.png)
+![img](https://raw.githubusercontent.com/Jameswain/blog/master/webpack-dev-middleware%E6%BA%90%E7%A0%81%E8%A7%A3%E8%AF%BB/imgs/1e5d0dc8-271d-4e16-861f-d412dad45dc4.png)
 
 
 
@@ -56,7 +56,7 @@ const webpackDevMiddlewareInstance = webpackDevMiddleware(comoiler,{
 
 运行结果：
 
-![img](file:///var/folders/pz/526472sj5cg5ylqblm4zf12c0000gn/T/WizNote/e3385b90-1b73-4562-958f-c355f35df2c5/index_files/62171372.png)
+![img](https://raw.githubusercontent.com/Jameswain/blog/master/webpack-dev-middleware%E6%BA%90%E7%A0%81%E8%A7%A3%E8%AF%BB/imgs/62171372.png)
 
 **源码链接：https://github.com/Jameswain/blog/tree/master/webpack-dev-middleware%E6%BA%90%E7%A0%81%E8%A7%A3%E8%AF%BB/demo1** 
 
@@ -64,9 +64,9 @@ const webpackDevMiddlewareInstance = webpackDevMiddleware(comoiler,{
 
 ​        如果此时我们不想把文件输出到内存里，可以通过修改webpack-dev-middleware的源代码来实现。打开node_modules/webpack-dev-middleware/lib/Shared.js文件，将该文件的231行注视掉后，重新运行 **node demo1/index.js** 即可看到文件被输出到demo1/dist文件夹中。
 
-![img](file:///var/folders/pz/526472sj5cg5ylqblm4zf12c0000gn/T/WizNote/e3385b90-1b73-4562-958f-c355f35df2c5/index_files/64101705.png)
+![img](https://raw.githubusercontent.com/Jameswain/blog/master/webpack-dev-middleware%E6%BA%90%E7%A0%81%E8%A7%A3%E8%AF%BB/imgs/64101705.png)
 
-![img](file:///var/folders/pz/526472sj5cg5ylqblm4zf12c0000gn/T/WizNote/e3385b90-1b73-4562-958f-c355f35df2c5/index_files/64287494.png)
+![img](https://raw.githubusercontent.com/Jameswain/blog/master/webpack-dev-middleware%E6%BA%90%E7%A0%81%E8%A7%A3%E8%AF%BB/imgs/64287494.png)
 
 ​        问：为什么webpack-dev-middleware要将webpack打包后的文件输出到内存中，而不是直接到磁盘上呢？
 
@@ -107,11 +107,11 @@ app.listen(3000, () => console.log('express 服务启动成功。。。'));
 
 项目目录：
 
-![img](file:///var/folders/pz/526472sj5cg5ylqblm4zf12c0000gn/T/WizNote/e3385b90-1b73-4562-958f-c355f35df2c5/index_files/29870194.png)
+![img](https://raw.githubusercontent.com/Jameswain/blog/master/webpack-dev-middleware%E6%BA%90%E7%A0%81%E8%A7%A3%E8%AF%BB/imgs/29870194.png)
 
 运行结果：
 
-![img](file:///var/folders/pz/526472sj5cg5ylqblm4zf12c0000gn/T/WizNote/e3385b90-1b73-4562-958f-c355f35df2c5/index_files/29985101.png)
+![img](https://raw.githubusercontent.com/Jameswain/blog/master/webpack-dev-middleware%E6%BA%90%E7%A0%81%E8%A7%A3%E8%AF%BB/imgs/29985101.png)
 
   通过上述代码我们可以看出不管是输出html文件还是图片文件都是需要先将这些文件读取到内存里，然后才能输出到response上。
 
@@ -125,7 +125,7 @@ app.listen(3000, () => console.log('express 服务启动成功。。。'));
 
 ​        首先打开node_modules/webpack-dev-middleware/middleware.js文件，注意版本号，我这份代码的版本号是webpack-dev-middleware@1.12.2。
 
-![img](file:///var/folders/pz/526472sj5cg5ylqblm4zf12c0000gn/T/WizNote/e3385b90-1b73-4562-958f-c355f35df2c5/index_files/2752702.png)
+![img](https://raw.githubusercontent.com/Jameswain/blog/master/webpack-dev-middleware%E6%BA%90%E7%A0%81%E8%A7%A3%E8%AF%BB/imgs/2752702.png)
 
 ​    middleware.js文件就是webpack-dev-middleware的入口文件，它主要做以下几件事情：
 
@@ -141,7 +141,7 @@ app.listen(3000, () => console.log('express 服务启动成功。。。'));
 
 ## Shared.js
 
-![img](file:///var/folders/pz/526472sj5cg5ylqblm4zf12c0000gn/T/WizNote/e3385b90-1b73-4562-958f-c355f35df2c5/index_files/41174537.png)
+![img](https://raw.githubusercontent.com/Jameswain/blog/master/webpack-dev-middleware%E6%BA%90%E7%A0%81%E8%A7%A3%E8%AF%BB/imgs/41174537.png)
 
 这个文件对webpack的compiler这个对象进行封装操作，我们大概先来看看这个文件主要做了哪些事情：
 
@@ -166,19 +166,19 @@ app.listen(3000, () => console.log('express 服务启动成功。。。'));
 
 ### share.setOptions 设置中间件的默认配置
 
-![img](file:///var/folders/pz/526472sj5cg5ylqblm4zf12c0000gn/T/WizNote/e3385b90-1b73-4562-958f-c355f35df2c5/index_files/43723629.png)
+![img](https://raw.githubusercontent.com/Jameswain/blog/master/webpack-dev-middleware%E6%BA%90%E7%A0%81%E8%A7%A3%E8%AF%BB/imgs/43723629.png)
 
 
 
 ### share.setFs(context.compiler) 设置compiler的文件操作对象
 
-![img](file:///var/folders/pz/526472sj5cg5ylqblm4zf12c0000gn/T/WizNote/e3385b90-1b73-4562-958f-c355f35df2c5/index_files/44042743.png)
+![img](https://raw.githubusercontent.com/Jameswain/blog/master/webpack-dev-middleware%E6%BA%90%E7%A0%81%E8%A7%A3%E8%AF%BB/imgs/44042743.png)
 
 
 
 ### share.startWatch() 以观察模式启动webpack
 
-![img](file:///var/folders/pz/526472sj5cg5ylqblm4zf12c0000gn/T/WizNote/e3385b90-1b73-4562-958f-c355f35df2c5/index_files/44383225.png)
+![img](https://raw.githubusercontent.com/Jameswain/blog/master/webpack-dev-middleware%E6%BA%90%E7%A0%81%E8%A7%A3%E8%AF%BB/imgs/44383225.png)
 
 compiler.watch(watchOptions, callback) 这个函数表示以监听模式启动webpack并返回一个watching对象，这里特别需要注意的是当调用compiler.watch函数时会立即执行watch-run这个钩子回调函数，直到这个钩子回调函数执行完毕后，才会返回watching对象。
 
@@ -186,9 +186,9 @@ compiler.watch(watchOptions, callback) 这个函数表示以监听模式启动we
 
 ### share.compilerDone(stats) webpack编译完成回调处理函数
 
-![img](file:///var/folders/pz/526472sj5cg5ylqblm4zf12c0000gn/T/WizNote/e3385b90-1b73-4562-958f-c355f35df2c5/index_files/55396865.png)
+![img](https://raw.githubusercontent.com/Jameswain/blog/master/webpack-dev-middleware%E6%BA%90%E7%A0%81%E8%A7%A3%E8%AF%BB/imgs/55396865.png)
 
-![img](file:///var/folders/pz/526472sj5cg5ylqblm4zf12c0000gn/T/WizNote/e3385b90-1b73-4562-958f-c355f35df2c5/index_files/55372833.png)
+![img](https://raw.githubusercontent.com/Jameswain/blog/master/webpack-dev-middleware%E6%BA%90%E7%A0%81%E8%A7%A3%E8%AF%BB/imgs/55372833.png)
 
 当webpack的一个编译完成时会进入done钩子回调函数，然后调用compilerDone函数，这个函数内部首先将context.state设置为true表示webpack编译完成，并记录webpack的统计信息对象stats，然后将webpack日志输出操作和回调函数执行都放到process.nextTick()任务队列执行，就是等主逻辑所有的代码执行完毕后才进行webpack的日志输出和中间件回调函数的执行。
 
@@ -198,7 +198,7 @@ compiler.watch(watchOptions, callback) 这个函数表示以监听模式启动we
 
 context.options.reporter 和 share.defaultReporter 指向的都是同一个函数
 
-![img](file:///var/folders/pz/526472sj5cg5ylqblm4zf12c0000gn/T/WizNote/e3385b90-1b73-4562-958f-c355f35df2c5/index_files/57543532.png)
+![img](https://raw.githubusercontent.com/Jameswain/blog/master/webpack-dev-middleware%E6%BA%90%E7%A0%81%E8%A7%A3%E8%AF%BB/imgs/57543532.png)
 
 ​    通过代码我们可以看出这个函数内部首先是要判断一下state这个状态，false表示webpack处于编译中，则直接输出 webpack: Compiling...。true：则表示webpack编译完成，则需要判断webpack-dev-middleware这个中间件都两个配置，noInfo和quiet，noInfo如果是为true则只输出错误和警告，quiet为true则不输出任何内容，默认这俩选项都是false，这时候会判断webpack编译成功后返回的stats对象里有没有错误和警告，有错误或警告就输出错误和警告，没有则输出webpack的编译日志，并且使用webpack-dev-middleware的options.stats配置项作为webpack日志输出配置，更多webpack日志输出配置选项见：<https://www.webpackjs.com/configuration/stats/>            <https://webpack.js.org/configuration/stats/> 
 
@@ -206,7 +206,7 @@ context.options.reporter 和 share.defaultReporter 指向的都是同一个函�
 
 ### handleCompilerCallback() - watch回调函数
 
-![img](file:///var/folders/pz/526472sj5cg5ylqblm4zf12c0000gn/T/WizNote/e3385b90-1b73-4562-958f-c355f35df2c5/index_files/59320658.png)
+![img](https://raw.githubusercontent.com/Jameswain/blog/master/webpack-dev-middleware%E6%BA%90%E7%A0%81%E8%A7%A3%E8%AF%BB/imgs/59320658.png)
 
 这个是watch回调函数，它是在compiler.plugin('done')钩子函数执行完毕之后执行，它有两个参数，一个是错误信息，一个是webpack编译成功的统计信息对象stats，可以看到这个回调函数内部只做错误信息的输出。
 
@@ -214,7 +214,7 @@ context.options.reporter 和 share.defaultReporter 指向的都是同一个函�
 
 ### webpack watch模式钩子函数执行流程图
 
-![img](file:///var/folders/pz/526472sj5cg5ylqblm4zf12c0000gn/T/WizNote/e3385b90-1b73-4562-958f-c355f35df2c5/index_files/e2513039-6288-4036-bb06-d138134fb99c.png)
+![img](https://raw.githubusercontent.com/Jameswain/blog/master/webpack-dev-middleware%E6%BA%90%E7%A0%81%E8%A7%A3%E8%AF%BB/imgs/e2513039-6288-4036-bb06-d138134fb99c.png)
 
 
 
@@ -282,7 +282,7 @@ app.listen(3000, () => console.log('启动express服务...'));  // 启动express
 
 ​        **1、我们先通过一个流程图看一下上面这段代码首次执行webpack-dev-middleware的内部运行流程**
 
-![img](file:///var/folders/pz/526472sj5cg5ylqblm4zf12c0000gn/T/WizNote/e3385b90-1b73-4562-958f-c355f35df2c5/index_files/1bc647a1-0727-41d0-b03c-584075ab42eb.jpg)
+![img](https://raw.githubusercontent.com/Jameswain/blog/master/webpack-dev-middleware%E6%BA%90%E7%A0%81%E8%A7%A3%E8%AF%BB/imgs/1bc647a1-0727-41d0-b03c-584075ab42eb.jpg)
 
 ​    
 
@@ -389,7 +389,7 @@ app.listen(3000, () => console.log('启动express服务...'));  // 启动express
 
 ​    下面通过一个流程图看一下这个中间件函数的执行流程：
 
-![img](file:///var/folders/pz/526472sj5cg5ylqblm4zf12c0000gn/T/WizNote/e3385b90-1b73-4562-958f-c355f35df2c5/index_files/f4f1ba7e-f38f-494b-b126-3897d379f075.png)
+![img](https://raw.githubusercontent.com/Jameswain/blog/master/webpack-dev-middleware%E6%BA%90%E7%A0%81%E8%A7%A3%E8%AF%BB/imgs/f4f1ba7e-f38f-494b-b126-3897d379f075.png)
 
 
 
