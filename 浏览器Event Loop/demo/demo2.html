@@ -2,85 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-    <style type="text/css">
-        .outer {
-            width: 500px;
-            height: 500px;
-            background-color: yellowgreen;
-        }
-        .inner {
-            width: 300px;
-            height: 300px;
-            margin: auto;
-            background-color: cadetblue;
-            transform: translateY(100px);
-        }
-    </style>
+    <title>demo2：setTimeout实现setInterval定时调度</title>
 </head>
 <body>
-    <div class="outer">
-        <div class="inner"></div>
-    </div>
     <script type="text/javascript">
-        (function() {
-            window.$ = function () {}
-            function ajax(method, url, success){
-                var r = new XMLHttpRequest();
-                r.onreadystatechange = function(){
-                    if(r.readyState==4 && (r.status==200 || r.status==0))
-                        success(r.responseText);
-                };
-                r.open(method,url,true);
-                r.setRequestHeader('X-Requested-With','XMLHttpRequest');
-                r.send(null);
-            }
-
-            $.get = function(url, success){ ajax('GET', url, success); };
-            $.post = function(url, success){ ajax('POST', url, success); };
-            $.getJSON = function(url, success){
-                $.get(url, function(json){ success(JSON.parse(json)) });
-            };
-        })();
-    </script>
-    <script type="text/javascript">
-        const outer = document.querySelector('.outer');
-        const inner = document.querySelector('.inner');
-        console.dir(outer);
-        // 观察 outer 对象属性变化，添加属性或者属性变化时触发
-        const mb = new MutationObserver(function () {
-            console.log('微任务-mutate ...');
-            // console.log('微任务-mutate before...');
-            // for(let i = 0; i < 10002220000; i++) {}
-            // console.log('微任务-mutate after...');
-        });
-        mb.observe(outer, {
-            attributes: true
-        });
-        console.log(mb);
-
-        // 添加事件监听
-        function onClick(e) {
-            console.log('用户交互-click');
-            setTimeout(function () {
-                console.log('宏任务-setTimeout...');
-                Promise.resolve().then(function () {
-                    console.log('setTimeout 微任务-promise...');
-                });
-            }, 0);
-
-            // outer.setAttribute('data-random', Math.random());
-
-            Promise.resolve().then(function () {
-                console.log('微任务-promise...')
-            });
-
-            outer.setAttribute('data-random', Math.random());
+        function logic() {
+            console.log(Date.now());
+            setTimeout(logic, 1000);
         }
-
-        inner.addEventListener('click', onClick);
-        outer.addEventListener('click', onClick);
-        // inner.click()
+        logic();
     </script>
 </body>
 </html>

@@ -2,9 +2,48 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>demo1：setTimeout与setInterval</title>
 </head>
 <body>
+    <div class="demo">demo</div>
+    <script type="text/javascript">
+        console.log('同步任务1 start');
+        setInterval(() => {
+            console.log('宏任务1：setInterval...');
+            Promise.resolve().then(function () {
+                console.log('宏任务1：setInterval => 微任务1 Promise.then()')
+            });
+            Promise.resolve().then(function () {
+                console.log('宏任务1：setInterval => 微任务2 Promise.then()')
+            });
+            Promise.resolve().then(function () {
+                console.log('宏任务1：setInterval => 微任务3 Promise.then()')
+            });
+        }, 3000);
+        setTimeout(function () {
+            console.log('宏任务2：setTimeout...');
+        }, 0);
+        // 微任务：监听DOM属性变化，当属性发生变化时触发回调函数
+        const demo = document.querySelector('.demo');
+        new MutationObserver(() => {
+            console.log('MutationObserver Callback...');
+        }).observe(demo, { attributes: true });
 
+        Promise.resolve().then(function () {
+            console.log('微任务1 Promise.then() 1')
+            Promise.resolve().then(() => {
+                console.log('微任务1-1 Promise.then() 1')
+            });
+            Promise.resolve().then(() => {
+                console.log('微任务1-2 Promise.then() 2')
+                Promise.resolve().then(() => {
+                    console.log('微任务1-2-1 Promise.then() 1')
+                });
+            });
+        });
+        // 修改DOM元素属性，将回调变化回调函数放入微任务队列中
+        demo.setAttribute('data-random', Math.random());
+        console.log('同步任务2 end');
+    </script>
 </body>
 </html>
