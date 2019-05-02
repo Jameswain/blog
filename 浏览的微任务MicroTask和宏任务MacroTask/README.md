@@ -73,7 +73,7 @@ demo1.html
 
 以上代码详细的运行步骤队列图，我已经写成了PPT，大家可以下载打开看效果，可以详细了解每一段代码在队列中的样子：
 
-[https://github.com/Jameswain/blog/tree/master/%E6%B5%8F%E8%A7%88%E5%99%A8Event%20Loop](https://github.com/Jameswain/blog/tree/master/浏览器Event Loop) 
+https://github.com/Jameswain/blog/tree/master/%E6%B5%8F%E8%A7%88%E7%9A%84%E5%BE%AE%E4%BB%BB%E5%8A%A1MicroTask%E5%92%8C%E5%AE%8F%E4%BB%BB%E5%8A%A1MacroTask
 
 ![img](https://raw.githubusercontent.com/Jameswain/blog/master/%E6%B5%8F%E8%A7%88%E7%9A%84%E5%BE%AE%E4%BB%BB%E5%8A%A1MicroTask%E5%92%8C%E5%AE%8F%E4%BB%BB%E5%8A%A1MacroTask/images/86305693.png)
 
@@ -159,7 +159,7 @@ logic();
 
 ​        上代码详细的运行步骤队列图，我已经写成了PPT，大家可以下载打开看效果，可以详细了解每一段代码在队列中的样子：
 
-[https://github.com/Jameswain/blog/tree/master/%E6%B5%8F%E8%A7%88%E5%99%A8Event%20Loop](https://github.com/Jameswain/blog/tree/master/浏览器Event Loop) 
+https://github.com/Jameswain/blog/tree/master/%E6%B5%8F%E8%A7%88%E7%9A%84%E5%BE%AE%E4%BB%BB%E5%8A%A1MicroTask%E5%92%8C%E5%AE%8F%E4%BB%BB%E5%8A%A1MacroTask
 
 ![img](https://raw.githubusercontent.com/Jameswain/blog/master/%E6%B5%8F%E8%A7%88%E7%9A%84%E5%BE%AE%E4%BB%BB%E5%8A%A1MicroTask%E5%92%8C%E5%AE%8F%E4%BB%BB%E5%8A%A1MacroTask/images/86305693.png)
 
