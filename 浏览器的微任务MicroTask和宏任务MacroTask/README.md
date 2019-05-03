@@ -9,7 +9,7 @@
 
 # 执行顺序
 
-![img](https://raw.githubusercontent.com/Jameswain/blog/master/%E6%B5%8F%E8%A7%88%E7%9A%84%E5%BE%AE%E4%BB%BB%E5%8A%A1MicroTask%E5%92%8C%E5%AE%8F%E4%BB%BB%E5%8A%A1MacroTask/images/73205145.png)
+![img](https://raw.githubusercontent.com/Jameswain/blog/master/%E6%B5%8F%E8%A7%88%E5%99%A8%E7%9A%84%E5%BE%AE%E4%BB%BB%E5%8A%A1MicroTask%E5%92%8C%E5%AE%8F%E4%BB%BB%E5%8A%A1MacroTask/images/73205145.png)
 
 **具体流程：**
 
@@ -19,7 +19,7 @@
 4. 取出微任务队列（MicroTask Queue）中的任务执行，直到队列被完全清空
 5. 重复 3 和 4，直到宏任务队列（MacroTask Queue）被清空。
 
-![img](https://raw.githubusercontent.com/Jameswain/blog/master/%E6%B5%8F%E8%A7%88%E7%9A%84%E5%BE%AE%E4%BB%BB%E5%8A%A1MicroTask%E5%92%8C%E5%AE%8F%E4%BB%BB%E5%8A%A1MacroTask/images/73784125.png)
+![img](https://raw.githubusercontent.com/Jameswain/blog/master/%E6%B5%8F%E8%A7%88%E5%99%A8%E7%9A%84%E5%BE%AE%E4%BB%BB%E5%8A%A1MicroTask%E5%92%8C%E5%AE%8F%E4%BB%BB%E5%8A%A1MacroTask/images/73784125.png)
 
 
 
@@ -69,13 +69,13 @@ demo1.html
 
 运行结果：
 
-![img](https://raw.githubusercontent.com/Jameswain/blog/master/%E6%B5%8F%E8%A7%88%E7%9A%84%E5%BE%AE%E4%BB%BB%E5%8A%A1MicroTask%E5%92%8C%E5%AE%8F%E4%BB%BB%E5%8A%A1MacroTask/images/74485363.png)
+![img](https://raw.githubusercontent.com/Jameswain/blog/master/%E6%B5%8F%E8%A7%88%E5%99%A8%E7%9A%84%E5%BE%AE%E4%BB%BB%E5%8A%A1MicroTask%E5%92%8C%E5%AE%8F%E4%BB%BB%E5%8A%A1MacroTask/images/74485363.png)
 
 以上代码详细的运行步骤队列图，我已经写成了PPT，大家可以下载打开看效果，可以详细了解每一段代码在队列中的样子：
 
-https://github.com/Jameswain/blog/tree/master/%E6%B5%8F%E8%A7%88%E7%9A%84%E5%BE%AE%E4%BB%BB%E5%8A%A1MicroTask%E5%92%8C%E5%AE%8F%E4%BB%BB%E5%8A%A1MacroTask
+https://github.com/Jameswain/blog/tree/master/%E6%B5%8F%E8%A7%88%E5%99%A8%E7%9A%84%E5%BE%AE%E4%BB%BB%E5%8A%A1MicroTask%E5%92%8C%E5%AE%8F%E4%BB%BB%E5%8A%A1MacroTask
 
-![img](https://raw.githubusercontent.com/Jameswain/blog/master/%E6%B5%8F%E8%A7%88%E7%9A%84%E5%BE%AE%E4%BB%BB%E5%8A%A1MicroTask%E5%92%8C%E5%AE%8F%E4%BB%BB%E5%8A%A1MacroTask/images/86305693.png)
+![img](https://raw.githubusercontent.com/Jameswain/blog/master/%E6%B5%8F%E8%A7%88%E5%99%A8%E7%9A%84%E5%BE%AE%E4%BB%BB%E5%8A%A1MicroTask%E5%92%8C%E5%AE%8F%E4%BB%BB%E5%8A%A1MacroTask/images/86305693.png)
 
 
 
@@ -153,15 +153,15 @@ logic();
 
 **运行结果：**
 
-![img](https://raw.githubusercontent.com/Jameswain/blog/master/%E6%B5%8F%E8%A7%88%E7%9A%84%E5%BE%AE%E4%BB%BB%E5%8A%A1MicroTask%E5%92%8C%E5%AE%8F%E4%BB%BB%E5%8A%A1MacroTask/images/84362615.png)
+![img](https://raw.githubusercontent.com/Jameswain/blog/master/%E6%B5%8F%E8%A7%88%E5%99%A8%E7%9A%84%E5%BE%AE%E4%BB%BB%E5%8A%A1MicroTask%E5%92%8C%E5%AE%8F%E4%BB%BB%E5%8A%A1MacroTask/images/84362615.png)
 
 ​        从运行结果可以发现，JavaScript的代码在浏览器中的执行顺序是【同步任务】 => 【清空微任务队列】=>【宏任务】=> 【清空微任务队列】，如果在执行微任务时，又发现了微任务，它会把这个微任务放入到微任务队列的末尾。宏任务也一样，如果在执行宏任务的时候发现了宏任务，它也会把这个宏任务放入宏任务队列的末尾。
 
 ​        上代码详细的运行步骤队列图，我已经写成了PPT，大家可以下载打开看效果，可以详细了解每一段代码在队列中的样子：
 
-https://github.com/Jameswain/blog/tree/master/%E6%B5%8F%E8%A7%88%E7%9A%84%E5%BE%AE%E4%BB%BB%E5%8A%A1MicroTask%E5%92%8C%E5%AE%8F%E4%BB%BB%E5%8A%A1MacroTask
+https://github.com/Jameswain/blog/tree/master/%E6%B5%8F%E8%A7%88%E5%99%A8%E7%9A%84%E5%BE%AE%E4%BB%BB%E5%8A%A1MicroTask%E5%92%8C%E5%AE%8F%E4%BB%BB%E5%8A%A1MacroTask
 
-![img](https://raw.githubusercontent.com/Jameswain/blog/master/%E6%B5%8F%E8%A7%88%E7%9A%84%E5%BE%AE%E4%BB%BB%E5%8A%A1MicroTask%E5%92%8C%E5%AE%8F%E4%BB%BB%E5%8A%A1MacroTask/images/86305693.png)
+![img](https://raw.githubusercontent.com/Jameswain/blog/master/%E6%B5%8F%E8%A7%88%E5%99%A8%E7%9A%84%E5%BE%AE%E4%BB%BB%E5%8A%A1MicroTask%E5%92%8C%E5%AE%8F%E4%BB%BB%E5%8A%A1MacroTask/images/86305693.png)
 
 **参考文档：**
 
