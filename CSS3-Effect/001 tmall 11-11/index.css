@@ -1,0 +1,662 @@
+html,
+body {
+    margin: 0;
+}
+
+.blackHole-main {
+    position: absolute;
+    width: 1300px;
+    height: 658px;
+    top: 50%;
+    left: 50%;
+    margin: -351px 0 0 -650px;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.blackHole-main .bg {
+    position: absolute;
+    width: 701px;
+    height: 702px;
+    left: 50%;
+    margin-left: -351px;
+    background: url("./images/yuan1.png") no-repeat;
+    background-position: 0 -606px;
+    animation: blackRotate 2s linear 0s infinite both;
+}
+
+.blackHole-main .baiC1,
+.blackHole-main .baiC2,
+.blackHole-main .baiC3 {
+    position: absolute;
+    width: 552px;
+    height: 552px;
+    left: 50%;
+    margin-left: -276px;
+    top: 76px;
+    background: url("./images/gu.png") no-repeat;
+    background-position: 0 0;
+    animation: blackRotate 2s linear 0s infinite both;
+}
+
+.blackHole-main .baiC2 {
+    animation: blackRotate 1.5s linear 0s infinite both;
+}
+
+.blackHole-main .baiC3 {
+    animation: blackRotate 1s linear 0s infinite both;
+}
+
+/* 第三部 光束 */
+.blackHole-main .caic1,
+.blackHole-main .caic2,
+.blackHole-main .caic3 {
+    position: absolute;
+    width: 552px;
+    height: 552px;
+    left: 50%;
+    margin-left: -276px;
+    top: 80px;
+    background: url("./images/cailu.png") no-repeat;
+    background-position: 0 -833px;
+    animation: blackRotate 2s linear 0s infinite both;
+}
+
+.blackHole-main .caic2 {
+    background-position: 0 -1907px;
+    animation: blackRotate 1.5s linear 0s infinite both;
+}
+
+.blackHole-main .caic3 {
+    background-position: 0 -1385px;
+    animation: blackRotate 1s linear 0s infinite both;
+}
+
+.blackHole-main .bo1 {
+    position: absolute;
+    top: 236px;
+    left: 50%;
+    margin-left: -114px;
+    width: 176px;
+    height: 176px;
+    border: 28px solid rgba(255,255,255,.9);
+    border-radius: 50%;
+    -webkit-animation: blackWave1 1.5s linear 0s infinite both;
+    animation: blackWave1 1.5s linear 0s infinite both;
+    -webkit-filter: blur(4px);
+    -moz-filter: blur(4px);
+    -ms-filter: blur(4px);
+    filter: blur(4px);
+}
+
+
+
+.blackHole-main .yuanLine1,
+.blackHole-main .yuanLine2 {
+    position: absolute;
+    width: 606px;
+    height: 606px;
+    left: 50%;
+    top: 50px;
+    margin-left: -296px;
+    background: url("./images/yuan1.png") no-repeat;
+    background-position: 0 0;
+}
+.blackHole-main .yuanLine1 {
+    -webkit-animation: blackBig 1s linear 0s infinite both;
+    animation: blackBig 1s linear 0s infinite both;
+}
+.blackHole-main .yuanLine2 {
+    -webkit-animation: blackBig 1s linear .6s infinite both;
+    animation: blackBig 1s linear .6s infinite both;
+}
+
+
+
+.blackHole-main .lu1 {
+    width: 530px;
+    height: 281px;
+    background: url("./images/cailu.png") no-repeat;
+    position: absolute;
+    top: 377px;
+    left: 50%;
+    margin-left: -265px;
+    background-position: 0 0;
+}
+
+.blackHole-main .lu2, .blackHole-main .lu3 {
+    position: absolute;
+    width: 552px;
+    height: 552px;
+    left: 50%;
+    margin-left: -276px;
+    top: 78px;
+    background: url("./images/cailu.png") no-repeat;
+    background-position: 0 -281px;
+    -webkit-animation: blacklug .6s linear 0s infinite both;
+    animation: blacklug .6s linear 0s infinite both;
+}
+
+.blackHole-main .lu3 {
+    -webkit-animation: blacklug .6s linear .3s infinite both;
+    animation: blacklug .6s linear .3s infinite both;
+}
+
+
+.blackHole-main .core {
+    position: absolute;
+    left: 50%;
+    margin-left: -75px;
+    top: 281px;
+    width: 150px;
+    height: 150px;
+    background: url(./images/minicat.png) no-repeat;
+    background-position: 0 0;
+    -webkit-animation: blackWave3 .4s linear 3.5s 1 both;
+    animation: blackWave3 .4s linear 3.5s 1 both;
+}
+
+.blackHole-main .cat {
+    position: absolute;
+    width: 115px;
+    height: 143px;
+    left: 50%;
+    margin-left: -57px;
+    top: 357px;
+    background: url(./images/minicat.png) no-repeat;
+    background-position: 0 -150px;
+}
+
+
+.blackHole-main .time2009,
+.blackHole-main .time2010,
+.blackHole-main .time2011,
+.blackHole-main .time2012,
+.blackHole-main .time2013,
+.blackHole-main .time2014,
+.blackHole-main .time2015,
+.blackHole-main .time2016,
+.blackHole-main .time2017,
+.blackHole-main .time2018 {
+    position: absolute;
+    width: 331px;
+    height: 80px;
+    left: 50%;
+    margin-left: -170px;
+    top: 400px;
+    background: url(./images/time.png) no-repeat;
+}
+.blackHole-main .time2009 {
+    background-position: 0 -234px;
+    -webkit-animation: blackTime .6s linear 0s 1 both;
+    animation: blackTime .6s linear 0s 1 both;
+    -moz-animation: blackTime .6s linear 0s 1 both;
+    -o-animation: blackTime .6s linear 0s 1 both;
+}
+.blackHole-main .time2010 {
+    background-position: 0 -314px;
+    -webkit-animation: blackTime .6s linear .3s 1 both;
+    animation: blackTime .6s linear .3s 1 both;
+    -moz-animation: blackTime .6s linear .3s 1 both;
+    -o-animation: blackTime .6s linear .3s 1 both;
+}
+.blackHole-main .time2011 {
+    background-position: 0 -394px;
+    -webkit-animation: blackTime .6s linear .6s 1 both;
+    animation: blackTime .6s linear .6s 1 both;
+    -moz-animation: blackTime .6s linear .6s 1 both;
+    -o-animation: blackTime .6s linear .6s 1 both;
+}
+.blackHole-main .time2012 {
+    background-position: 0 -474px;
+    -webkit-animation: blackTime .6s linear .9s 1 both;
+    animation: blackTime .6s linear .9s 1 both;
+    -moz-animation: blackTime .6s linear .9s 1 both;
+    -o-animation: blackTime .6s linear .9s 1 both;
+}
+.blackHole-main .time2013 {
+    background-position: 0 -554px;
+    -webkit-animation: blackTime .6s linear 1.2s 1 both;
+    animation: blackTime .6s linear 1.2s 1 both;
+    -moz-animation: blackTime .6s linear 1.2s 1 both;
+    -o-animation: blackTime .6s linear 1.2s 1 both;
+}
+.blackHole-main .time2014 {
+    background-position: 0 -634px;
+    -webkit-animation: blackTime .6s linear 1.5s 1 both;
+    animation: blackTime .6s linear 1.5s 1 both;
+    -moz-animation: blackTime .6s linear 1.5s 1 both;
+    -o-animation: blackTime .6s linear 1.5s 1 both;
+}
+.blackHole-main .time2015 {
+    background-position: 0 -714px;
+    -webkit-animation: blackTime .6s linear 1.8s 1 both;
+    animation: blackTime .6s linear 1.8s 1 both;
+    -moz-animation: blackTime .6s linear 1.8s 1 both;
+    -o-animation: blackTime .6s linear 1.8s 1 both;
+}
+.blackHole-main .time2016 {
+    background-position: 0 -794px;
+    -webkit-animation: blackTime .6s linear 2.1s 1 both;
+    animation: blackTime .6s linear 2.1s 1 both;
+    -moz-animation: blackTime .6s linear 2.1s 1 both;
+    -o-animation: blackTime .6s linear 2.1s 1 both;
+}
+.blackHole-main .time2017 {
+    background-position: 0 -874px;
+    -webkit-animation: blackTime .6s linear 2.4s 1 both;
+    animation: blackTime .6s linear 2.4s 1 both;
+    -moz-animation: blackTime .6s linear 2.4s 1 both;
+    -o-animation: blackTime .6s linear 2.4s 1 both;
+}
+.blackHole-main .time2018 {
+    width: 302px;
+    height: 234px;
+    top: 290px;
+    margin-left: -151px;
+    background-position: 0 0;
+    -webkit-animation: blackTime2018 1.5s linear 3s 1 both;
+    animation: blackTime2018 3s linear 2.7s 1 both;
+    -moz-animation: blackTime2018 1.5s linear 3s 1 both;
+    -o-animation: blackTime2018 3s linear 2.7s 1 both;
+}
+
+.blackHole-main .qiu1,
+.blackHole-main .qiu3 {
+    width: 31px;
+    height: 26px;
+    position: absolute;
+    left: 50%;
+    margin-left: -16px;
+    top: 339px;
+    background: url(./images/micat.png) no-repeat;
+    background-position: 0 -143px;
+    -webkit-animation: blackjiao1 2.1s linear 0s infinite both;
+    animation: blackjiao1 2.1s linear 0s infinite both;
+    -moz-animation: blackjiao1 2.1s linear 0s infinite both;
+    -o-animation: blackjiao1 2.1s linear 0s infinite both;
+}
+.blackHole-main .qiu2 {
+    width: 46px;
+    height: 39px;
+    position: absolute;
+    left: 50%;
+    margin-left: -23px;
+    top: 334px;
+    background: url(./images/minicat.png) no-repeat;
+    background-position: 0 -319px;
+    -webkit-animation: blackjiao2 2.1s linear .7s infinite both;
+    animation: blackjiao2 2.1s linear .7s infinite both;
+    -moz-animation: blackjiao2 2.1s linear .7s infinite both;
+    -o-animation: blackjiao2 2.1s linear .7s infinite both;
+}
+.blackHole-main .qiu3 {
+    -webkit-animation: blackjiao1 2.1s linear 1.4s infinite both;
+    animation: blackjiao1 2s linear 1.4s infinite both;
+    -moz-animation: blackjiao1 2.1s linear 1.4s infinite both;
+    -o-animation: blackjiao1 2s linear 1.4s infinite both;
+}
+
+
+.blackHole-main .bag1,
+.blackHole-main .bag3 {
+    width: 101px;
+    height: 129px;
+    position: absolute;
+    left: 50%;
+    margin-left: -50px;
+    top: 275px;
+    background: url(./images/minicat.png) no-repeat;
+    background-position: 0 -430px;
+    -webkit-animation: blackjiao1 2.1s linear .7s infinite both;
+    animation: blackjiao1 2.1s linear .7s infinite both;
+    -moz-animation: blackjiao1 2.1s linear .7s infinite both;
+    -o-animation: blackjiao1 2.1s linear .7s infinite both;
+}
+
+.blackHole-main .bag3 {
+    -webkit-animation: blackjiao1 2.1s linear 1.4s infinite both;
+    animation: blackjiao1 2.1s linear 1.4s infinite both;
+    -moz-animation: blackjiao1 2.1s linear 1.4s infinite both;
+    -o-animation: blackjiao1 2.1s linear 1.4s infinite both;
+}
+
+.blackHole-main .radBag {
+    position: absolute;
+    width: 576px;
+    height: 646px;
+    left: 50%;
+    margin-left: -288px;
+    top: 30px;
+    -webkit-animation: blackBig1 .3s linear 3.7s 1 both;
+    animation: blackBig1 .3s linear 3.7s 1 both;
+    -moz-animation: blackBig1 .3s linear 3.7s 1 both;
+    -o-animation: blackBig1 .3s linear 3.7s 1 both;
+}
+
+
+.blackHole-main .radBag .radBagbg {
+    background: url(./images/rad.png) no-repeat;
+    background-position: 0 -1579px;
+    position: absolute;
+    width: 576px;
+    height: 646px;
+    left: 50%;
+    margin-left: -288px;
+}
+
+.blackHole-main .radBag .xin1,
+.blackHole-main .radBag .xin2 {
+    background: url(./images/rad.png) no-repeat;
+    background-position: 0 0;
+    top: 36px;
+    position: absolute;
+    width: 544px;
+    height: 307px;
+    left: 50%;
+    margin-left: -258px;
+    -webkit-animation: blackBig3 .5s linear 4s infinite both;
+    animation: blackBig3 .5s linear 4s infinite both;
+    -moz-animation: blackBig3 .5s linear 4s infinite both;
+    -o-animation: blackBig3 .5s linear 4s infinite both;
+}
+.blackHole-main .radBag .xin2 {
+    margin-left: -294px;
+    top: 32px;
+    background-position: 0 -307px;
+    -webkit-animation: blackBig3 .5s linear 4.2s infinite both;
+    animation: blackBig3 .5s linear 4.2s infinite both;
+    -moz-animation: blackBig3 .5s linear 4.2s infinite both;
+    -o-animation: blackBig3 .5s linear 4.2s infinite both;
+}
+
+.blackHole-main .radBag .jin {
+    background: url(./images/rad.png) no-repeat;
+    background-position: 0 -1088px;
+    top: 87px;
+    position: absolute;
+    width: 538px;
+    height: 491px;
+    left: 50%;
+    margin-left: -286px;
+    -webkit-animation: blackBig2 .3s linear 4.2s 1 both;
+    animation: blackBig2 .3s linear 4.2s 1 both;
+    -moz-animation: blackBig2 .3s linear 4.2s 1 both;
+    -o-animation: blackBig2 .3s linear 4.2s 1 both;
+}
+
+.blackHole-main .radBag .title {
+    position: absolute;
+    width: 445px;
+    height: 364px;
+    left: 50%;
+    margin-left: -222px;
+    top: 117px;
+    background: url(./images/rad.png) no-repeat;
+    background-position: 0 -724px;
+}
+
+.blackHole-main .radBag .btn {
+    background: url(./images/rad.png) no-repeat;
+    background-position: 0 -614px;
+    position: absolute;
+    width: 293px;
+    height: 110px;
+    left: 50%;
+    margin-left: -146px;
+    bottom: 30px;
+    -webkit-animation: blackBig4 1s linear 4s infinite both;
+    animation: blackBig4 1s linear 4s infinite both;
+    -moz-animation: blackBig4 1s linear 4s infinite both;
+    -o-animation: blackBig4 1s linear 4s infinite both;
+}
+
+/* 动画 */
+@keyframes blackRotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes blackWave1 {
+    0% {
+        transform: scale(1);
+        opacity: 0;
+    }
+    0.1% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(2.8);
+        opacity: 0;
+    }
+}
+
+@keyframes blackWave3 {
+    50% {
+        transform: scale(5);
+        opacity: 1;
+    }
+    99.9% {
+        transform: scale(5);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(5);
+        opacity: 0;
+    }
+}
+
+@keyframes blackBig {
+    0% {
+        transform: scale(0);
+        opacity: 1;
+    }
+    60% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1.2);
+        opacity: 0;
+    }
+}
+
+@keyframes blacklug {
+    0% {
+        transform: scale(0);
+        opacity: 1;
+    }
+    99% {
+        transform: scale(1.4);
+        opacity: 1;
+    }
+    99.9% {
+        transform: scale(1.4);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1.4);
+        opacity: 0;
+    }
+}
+
+@keyframes blackTime {
+    0% {
+        transform: translate3d(0,0,0) scale(0);
+        opacity: 1;
+    }
+    50% {
+        transform: translate3d(0,163px,0) scale(1);
+        opacity: 1;
+    }
+    90% {
+        transform: translate3d(0,163px,0) scale(1);
+        opacity: 1;
+    }
+    91% {
+        transform: translate3d(0,163px,0) scale(1);
+        opacity: 0;
+    }
+    100% {
+        transform: translate3d(0,163px,0) scale(1);
+        opacity: 0;
+    }
+}
+
+@keyframes blackTime2018 {
+    0% {
+        transform: translate3d(0,0,0) scale(0);
+        opacity: 1;
+    }
+    10% {
+        transform: translate3d(0,135px,0) scale(1);
+        opacity: 1;
+    }
+    99.9% {
+        transform: translate3d(0,135px,0) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translate3d(0,135px,0) scale(1);
+        opacity: 0;
+    }
+}
+
+@keyframes blackjiao1 {
+    0% {
+        transform: translate3d(0,0,0) rotate(0deg) scale(0);
+        opacity: 1;
+    }
+    30% {
+        transform: translate3d(0,-353px,0) rotate(0deg) scale(1);
+        opacity: 1;
+    }
+    31% {
+        transform: translate3d(0,-365px,0) rotate(0deg) scale(1);
+        opacity: 0;
+    }
+    31.1% {
+        transform: translate3d(0,0,0) rotate(84deg) scale(0);
+        opacity: 1;
+    }
+    61% {
+        transform: translate3d(366px,-34px,0) rotate(84deg) scale(1);
+        opacity: 1;
+    }
+    62% {
+        transform: translate3d(378px,-46px,0) rotate(84deg) scale(1);
+        opacity: 0;
+    }
+    62.1% {
+        transform: translate3d(0,0,0) rotate(-112deg) scale(0);
+        opacity: 1;
+    }
+    92% {
+        transform: translate3d(-366px,121px,0) rotate(-112deg) scale(1);
+        opacity: 1;
+    }
+    93% {
+        transform: translate3d(-378px,133px,0) rotate(-112deg) scale(1);
+        opacity: 0;
+    }
+    100% {
+        transform: translate3d(0,0,0) rotate(0deg) scale(0);
+        opacity: 0;
+    }
+}
+
+@keyframes blackjiao2 {
+    0% {
+        transform: translate3d(0,0,0) rotate(57deg) scale(0);
+        opacity: 1;
+    }
+    30% {
+        transform: translate3d(295px,-222px,0) rotate(57deg) scale(1);
+        opacity: 1;
+    }
+    31% {
+        transform: translate3d(305px,-232px,0) rotate(57deg) scale(1);
+        opacity: 0;
+    }
+    31.1% {
+        transform: translate3d(0,0,0) rotate(122deg) scale(0);
+        opacity: 1;
+    }
+    61% {
+        transform: translate3d(297px,168px,0) rotate(122deg) scale(1);
+        opacity: 1;
+    }
+    62% {
+        transform: translate3d(307px,178px,0) rotate(122deg) scale(1);
+        opacity: 0;
+    }
+    62.1% {
+        transform: translate3d(0,0,0) rotate(-75deg) scale(0);
+        opacity: 1;
+    }
+    92% {
+        transform: translate3d(-371px,-117px,0) rotate(-75deg) scale(1);
+        opacity: 1;
+    }
+    93% {
+        transform: translate3d(-381px,-127px,0) rotate(-75deg) scale(1);
+        opacity: 0;
+    }
+    100% {
+        transform: translate3d(0,0,0) rotate(57deg) scale(0);
+        opacity: 0;
+    }
+}
+
+@keyframes blackBig1 {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes blackBig2 {
+    0% {
+        transform: scale(0);
+    }
+    95% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes blackBig3 {
+    0% {
+        opacity: 0;
+    }
+    30% {
+        opacity: 1;
+    }
+    70% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes blackBig4 {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.95);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
