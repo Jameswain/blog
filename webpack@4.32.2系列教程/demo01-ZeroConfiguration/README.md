@@ -63,7 +63,7 @@ compiler.run((err, stats) => {
 
 ![003](https://raw.githubusercontent.com/Jameswain/blog/master/webpack%404.32.2%E7%B3%BB%E5%88%97%E6%95%99%E7%A8%8B/demo01-ZeroConfiguration/images/003.png)
 
-[源码地址](https://github.com/Jameswain/blog/tree/master/webpack%404.32.2%E7%B3%BB%E5%88%97%E6%95%99%E7%A8%8B/demo01-ZeroConfiguration) https://github.com/Jameswain/blog/tree/master/webpack%404.32.2%E7%B3%BB%E5%88%97%E6%95%99%E7%A8%8B/demo01-ZeroConfiguration
+[源码地址](https://github.com/Jameswain/blog/tree/master/webpack%404.32.2%E7%B3%BB%E5%88%97%E6%95%99%E7%A8%8B/demo01-ZeroConfiguration)
 
 
 
