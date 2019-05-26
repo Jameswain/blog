@@ -1,7 +1,7 @@
 ### 核心概念
-    webpack是一个前端资源模块打包工具，它可以根据模块的依赖关系进行打包输出成浏览器能够识别的静态资源，可以把多个文件打包成一个，减少http请求。
+​		webpack是一个前端资源模块打包工具，它可以根据模块的依赖关系进行打包输出成浏览器能够识别的静态资源，可以把多个文件打包成一个，减少http请求。
 
-![001](/Users/jameswain/PROD/blog/webpack@4.32.2系列教程/demo01-ZeroConfiguration/images/001.png)
+![001](https://raw.githubusercontent.com/Jameswain/blog/master/webpack%404.32.2%E7%B3%BB%E5%88%97%E6%95%99%E7%A8%8B/demo01-ZeroConfiguration/images/001.png)
 
 
 ### 零配置启动
@@ -59,9 +59,13 @@ compiler.run((err, stats) => {
 
 **第4步：cd到demo01-ZeroConfiguration文件夹下，运行node scripts/build.js**
 
-![002](/Users/jameswain/PROD/blog/webpack@4.32.2系列教程/demo01-ZeroConfiguration/images/002.png)
+![002](https://raw.githubusercontent.com/Jameswain/blog/master/webpack%404.32.2%E7%B3%BB%E5%88%97%E6%95%99%E7%A8%8B/demo01-ZeroConfiguration/images/002.png)
 
-![003](/Users/jameswain/PROD/blog/webpack@4.32.2系列教程/demo01-ZeroConfiguration/images/003.png)
+![003](https://raw.githubusercontent.com/Jameswain/blog/master/webpack%404.32.2%E7%B3%BB%E5%88%97%E6%95%99%E7%A8%8B/demo01-ZeroConfiguration/images/003.png)
 
-[源码地址]: 
+[源码地址](https://github.com/Jameswain/blog/tree/master/webpack%404.32.2%E7%B3%BB%E5%88%97%E6%95%99%E7%A8%8B/demo01-ZeroConfiguration) https://github.com/Jameswain/blog/tree/master/webpack%404.32.2%E7%B3%BB%E5%88%97%E6%95%99%E7%A8%8B/demo01-ZeroConfiguration
+
+
+
+
 
