@@ -3,10 +3,11 @@
 
 | 选项        | 描述                                                         |
 | ----------- | ------------------------------------------------------------ |
-| development | 将 process.env.NODE_ENV 的值设为 development。启用 NamedChunksPlugin 和 NamedModulesPlugin。 |
-| production  | 将 process.env.NODE_ENV 的值设为 production。启用 FlagDependencyUsagePlugin, FlagIncludedChunksPlugin, ModuleConcatenationPlugin, NoEmitOnErrorsPlugin, OccurrenceOrderPlugin, SideEffectsFlagPlugin 和 UglifyJsPlugin. |
-| none        | 将 process.env.NODE_ENV 的值设为 node。使用默认的优化项。    |
+| development | 通过DefinePlugin插件将 process.env.NODE_ENV 的值设为 development。启用 NamedChunksPlugin 和 NamedModulesPlugin。 |
+| production  | 通过DefinePlugin插件将 process.env.NODE_ENV 的值设为 production。启用 FlagDependencyUsagePlugin, FlagIncludedChunksPlugin, ModuleConcatenationPlugin, NoEmitOnErrorsPlugin, OccurrenceOrderPlugin, SideEffectsFlagPlugin 和 TerserPlugin. |
+| none        | 通过DefinePlugin插件将 process.env.NODE_ENV 的值设为 node。使用默认的优化项。 |
 
+### 演示
 下面通过一段代码分别演示一个每一个模式打包输出的文件内容：
 
 **第一步：编写入口文件和依赖代码**
@@ -73,5 +74,22 @@ compiler.run((err, stats) => {
 
 **小结：** 可以看到每一种模式，打包后输出的代码都不一样，我们平时开发使用development模式，当代码需要发布上线时使用production模式。
 
-**注意：** 上面说的process.env.NODE_ENV并不是Node.js的process.env.NODE_ENV运行环境变量，它是webpack内部维护的一个全局变量。
+**注意：** 上面说的process.env.NODE_ENV并不是Node.js的process.env.NODE_ENV运行环境变量，它其实是通过DefinePlugin插件设置的一个webpack全局变量。
 
+
+
+### 总结
+
+​		mode其实可以理解为webpack4.0.0 提供一个语法糖，它的三个可选项，其实就是三套不同的webpack默认配置而已，以下是每一种模式对应的webpack配置：
+
+##### mode: development
+
+![05](https://raw.githubusercontent.com/Jameswain/blog/master/webpack%404.32.2%E7%B3%BB%E5%88%97%E6%95%99%E7%A8%8B/demo02-mode/docs/05.png)
+
+##### mode: production
+
+![06](https://raw.githubusercontent.com/Jameswain/blog/master/webpack%404.32.2%E7%B3%BB%E5%88%97%E6%95%99%E7%A8%8B/demo02-mode/docs/06.png)
+
+##### mode: none
+
+![07](https://raw.githubusercontent.com/Jameswain/blog/master/webpack%404.32.2%E7%B3%BB%E5%88%97%E6%95%99%E7%A8%8B/demo02-mode/docs/07.png)
