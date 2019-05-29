@@ -71,7 +71,7 @@ compiler.run((err, stats) => {
 
 ![04](https://raw.githubusercontent.com/Jameswain/blog/master/webpack%404.32.2%E7%B3%BB%E5%88%97%E6%95%99%E7%A8%8B/demo02-mode/docs/04.png)
 
-**小结：**可以看到每一种模式，打包后输出的代码都不一样，我们平时开发使用development模式，当代码需要发布上线时使用production模式。
+**小结：** 可以看到每一种模式，打包后输出的代码都不一样，我们平时开发使用development模式，当代码需要发布上线时使用production模式。
 
-**注意：**上面说的process.env.NODE_ENV并不是Node.js的process.env.NODE_ENV运行环境变量，它是webpack内部维护的一个全局变量。
+**注意：** 上面说的process.env.NODE_ENV并不是Node.js的process.env.NODE_ENV运行环境变量，它是webpack内部维护的一个全局变量。
 
