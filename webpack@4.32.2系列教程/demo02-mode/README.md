@@ -57,19 +57,19 @@ compiler.run((err, stats) => {
 
 **第三步：cd到demo02-mode文件夹下，运行node scripts/build.js**
 
-![01](/Users/jameswain/PROD/blog/webpack@4.32.2系列教程/demo02-mode/docs/01.png)
+![01](https://raw.githubusercontent.com/Jameswain/blog/master/webpack%404.32.2%E7%B3%BB%E5%88%97%E6%95%99%E7%A8%8B/demo02-mode/docs/01.png)
 
 **mode: none 打包输出的main.js文件内容**
 
-![02](/Users/jameswain/PROD/blog/webpack@4.32.2系列教程/demo02-mode/docs/02.png)
+![02](https://raw.githubusercontent.com/Jameswain/blog/master/webpack%404.32.2%E7%B3%BB%E5%88%97%E6%95%99%E7%A8%8B/demo02-mode/docs/02.png)
 
 **mode:development  打包输出的main.js文件内容**
 
-![03](/Users/jameswain/PROD/blog/webpack@4.32.2系列教程/demo02-mode/docs/03.png)
+![03](https://raw.githubusercontent.com/Jameswain/blog/master/webpack%404.32.2%E7%B3%BB%E5%88%97%E6%95%99%E7%A8%8B/demo02-mode/docs/03.png)
 
 **mode:production  打包输出的main.js文件内容**
 
-![04](/Users/jameswain/PROD/blog/webpack@4.32.2系列教程/demo02-mode/docs/04.png)
+![04](https://raw.githubusercontent.com/Jameswain/blog/master/webpack%404.32.2%E7%B3%BB%E5%88%97%E6%95%99%E7%A8%8B/demo02-mode/docs/04.png)
 
 **小结：**可以看到每一种模式，打包后输出的代码都不一样，我们平时开发使用development模式，当代码需要发布上线时使用production模式。
 
