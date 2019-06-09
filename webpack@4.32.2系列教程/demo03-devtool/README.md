@@ -8,9 +8,9 @@
 
 ​	Google Dev Tools 可以通过以下方式打开JavaScript的source map 和 CSS的source map：
 
-![01](/Users/jameswain/PROD/blog/webpack@4.32.2系列教程/demo03-devtool/docs/01.jpg)
+![01](https://raw.githubusercontent.com/Jameswain/blog/master/webpack%404.32.2%E7%B3%BB%E5%88%97%E6%95%99%E7%A8%8B/demo03-devtool/docs/01.jpg)
 
-![02](/Users/jameswain/PROD/blog/webpack@4.32.2系列教程/demo03-devtool/docs/02.jpg)
+![02](https://raw.githubusercontent.com/Jameswain/blog/master/webpack%404.32.2%E7%B3%BB%E5%88%97%E6%95%99%E7%A8%8B/demo03-devtool/docs/02.jpg)
 
 ​	source map主要用于将压缩混淆后的JavaScript代码和CSS代码映射到源码中，方便debug调试。更多关于source map的知识，大家可以参考阮一峰大神的文章：[JavaScript Source Map 详解](http://www.ruanyifeng.com/blog/2013/01/javascript_source_map.html)
 
@@ -24,7 +24,7 @@
 
 **1、编写入口文件和依赖代码**
 
-![003](/Users/jameswain/PROD/blog/webpack@4.32.2系列教程/demo03-devtool/docs/03.jpg)
+![003](https://raw.githubusercontent.com/Jameswain/blog/master/webpack%404.32.2%E7%B3%BB%E5%88%97%E6%95%99%E7%A8%8B/demo03-devtool/docs/03.jpg)
 
 **2、编写webpack配置 & 启动webpack**
 
@@ -51,19 +51,19 @@ compiler.run((err, stats) => {
 
 **webpack运行结果**：
 
-![04](/Users/jameswain/PROD/blog/webpack@4.32.2系列教程/demo03-devtool/docs/04.jpg)
+![04](https://raw.githubusercontent.com/Jameswain/blog/master/webpack%404.32.2%E7%B3%BB%E5%88%97%E6%95%99%E7%A8%8B/demo03-devtool/docs/04.jpg)
 
 **打包输出的main.js文件**
 
-![05](/Users/jameswain/PROD/blog/webpack@4.32.2系列教程/demo03-devtool/docs/05.jpg)
+![05](https://raw.githubusercontent.com/Jameswain/blog/master/webpack%404.32.2%E7%B3%BB%E5%88%97%E6%95%99%E7%A8%8B/demo03-devtool/docs/05.jpg)
 
 ​	从打包出来的main.js文件中我们可以发现index.js文件和role.js文件的所有代码都被转换成了字符串，使用eval进行执行，代码的最后面都加上了//# sourceURL 指向原始文件的位置，这种模式并不会输出map文件。
 
 **浏览器运行结果：**
 
-![06](/Users/jameswain/PROD/blog/webpack@4.32.2系列教程/demo03-devtool/docs/06.jpg)
+![06](https://raw.githubusercontent.com/Jameswain/blog/master/webpack%404.32.2%E7%B3%BB%E5%88%97%E6%95%99%E7%A8%8B/demo03-devtool/docs/06.jpg)
 
-![07](/Users/jameswain/PROD/blog/webpack@4.32.2系列教程/demo03-devtool/docs/07.jpg)
+![07](https://raw.githubusercontent.com/Jameswain/blog/master/webpack%404.32.2%E7%B3%BB%E5%88%97%E6%95%99%E7%A8%8B/demo03-devtool/docs/07.jpg)
 
 ​	从浏览器的运行结果中，左侧多了一个webpack://，其实这个就是//# sourceURL设置值，如果我们在代码中修改了这个名字，那么浏览器就会显示的是另外一个名字，如果删除它，那么它的源码映射就会消失。而且它映射到的每一个源文件的头部都会加上一段webpack的代码，这对于我们来说并不友好，这种模式我使用的频率相当少。
 
@@ -79,7 +79,7 @@ npm i -D css-loader
 
 **2、修改webpack配置**
 
-![13](/Users/jameswain/PROD/blog/webpack@4.32.2系列教程/demo03-devtool/docs/13.jpg)
+![13](https://raw.githubusercontent.com/Jameswain/blog/master/webpack%404.32.2%E7%B3%BB%E5%88%97%E6%95%99%E7%A8%8B/demo03-devtool/docs/13.jpg)
 
 **3、创建main.css文件**
 
@@ -92,13 +92,13 @@ body {
 
 **4、src/index.js导入main.css**
 
-![14](/Users/jameswain/PROD/blog/webpack@4.32.2系列教程/demo03-devtool/docs/14.jpg)
+![14](https://raw.githubusercontent.com/Jameswain/blog/master/webpack%404.32.2%E7%B3%BB%E5%88%97%E6%95%99%E7%A8%8B/demo03-devtool/docs/14.jpg)
 
 **5、运行webpack**
 
-![15](/Users/jameswain/PROD/blog/webpack@4.32.2系列教程/demo03-devtool/docs/15.jpg)
+![15](https://raw.githubusercontent.com/Jameswain/blog/master/webpack%404.32.2%E7%B3%BB%E5%88%97%E6%95%99%E7%A8%8B/demo03-devtool/docs/15.jpg)
 
-![16](/Users/jameswain/PROD/blog/webpack@4.32.2系列教程/demo03-devtool/docs/16.jpg)
+![16](https://raw.githubusercontent.com/Jameswain/blog/master/webpack%404.32.2%E7%B3%BB%E5%88%97%E6%95%99%E7%A8%8B/demo03-devtool/docs/16.jpg)
 
 
 
@@ -131,23 +131,23 @@ compiler.run((err, stats) => {
 
 运行webpack后，可以看到dist文件夹下会多出一个main.js.map文件，这个就是source map源码映射文件
 
-![08](/Users/jameswain/PROD/blog/webpack@4.32.2系列教程/demo03-devtool/docs/08.jpg)
+![08](https://raw.githubusercontent.com/Jameswain/blog/master/webpack%404.32.2%E7%B3%BB%E5%88%97%E6%95%99%E7%A8%8B/demo03-devtool/docs/08.jpg)
 
 **2、将main.js.map文件上传到内网服务器**
 
-![09](/Users/jameswain/PROD/blog/webpack@4.32.2系列教程/demo03-devtool/docs/09.jpg)
+![09](https://raw.githubusercontent.com/Jameswain/blog/master/webpack%404.32.2%E7%B3%BB%E5%88%97%E6%95%99%E7%A8%8B/demo03-devtool/docs/09.jpg)
 
 **3、修改sourceMappingURL映射文件的路径**
 
-![10](/Users/jameswain/PROD/blog/webpack@4.32.2系列教程/demo03-devtool/docs/10.jpg)
+![10](https://raw.githubusercontent.com/Jameswain/blog/master/webpack%404.32.2%E7%B3%BB%E5%88%97%E6%95%99%E7%A8%8B/demo03-devtool/docs/10.jpg)
 
 **4、在浏览器中运行webpack打包出来的main.js文件**
 
-![11](/Users/jameswain/PROD/blog/webpack@4.32.2系列教程/demo03-devtool/docs/11.jpg)
+![11](https://raw.githubusercontent.com/Jameswain/blog/master/webpack%404.32.2%E7%B3%BB%E5%88%97%E6%95%99%E7%A8%8B/demo03-devtool/docs/11.jpg)
 
 已经成功的跟源码建立了映射，如果此时我把内网的服务器关掉，看看会发生什么事情？
 
-![12](/Users/jameswain/PROD/blog/webpack@4.32.2系列教程/demo03-devtool/docs/12.jpg)
+![12](https://raw.githubusercontent.com/Jameswain/blog/master/webpack%404.32.2%E7%B3%BB%E5%88%97%E6%95%99%E7%A8%8B/demo03-devtool/docs/12.jpg)
 
 可以发现如果内网服务器关闭了，Google Dev Tools就找不到main.js.map映射文件了，此时浏览器就没有源码映射了，但是也不会报错。
 
@@ -159,6 +159,6 @@ compiler.run((err, stats) => {
 
 ​	cheap-module-source-map：在开发环境使用
 
-![17](/Users/jameswain/PROD/blog/webpack@4.32.2系列教程/demo03-devtool/docs/17.jpg)
+![17](https://raw.githubusercontent.com/Jameswain/blog/master/webpack%404.32.2%E7%B3%BB%E5%88%97%E6%95%99%E7%A8%8B/demo03-devtool/docs/17.jpg)
 
 ​		这是官网上所有devtool的配置说明
