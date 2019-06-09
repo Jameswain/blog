@@ -1,6 +1,6 @@
 ### 简介
 
-​	devtool选项用于控制是否需要生成source map，以及如何生成source map。
+​	devtool选项用于控制是否需要生成source map，以及如何生成source map。[源码地址](https://github.com/Jameswain/blog/tree/master/webpack%404.32.2%E7%B3%BB%E5%88%97%E6%95%99%E7%A8%8B/demo03-devtool)
 
 #### 什么是source map？
 
@@ -161,4 +161,4 @@ compiler.run((err, stats) => {
 
 ![17](https://raw.githubusercontent.com/Jameswain/blog/master/webpack%404.32.2%E7%B3%BB%E5%88%97%E6%95%99%E7%A8%8B/demo03-devtool/docs/17.jpg)
 
-​		这是官网上所有devtool的配置说明
+​		这是官网上所有devtool的配置说明，感兴趣的同学可以对每个选项进行尝试。
