@@ -1,5 +1,5 @@
 # 简介
-![01](/Users/jameswain/PROD/blog/JavaScript/Object.defineProperty/docs/01.jpg)
+![01](https://raw.githubusercontent.com/Jameswain/blog/master/JavaScript/Object.defineProperty/docs/01.jpg)
 
 Object.defineProperty(对象，属性，属性描述符) 用于在一个对象上定义一个新的属性，或者修改一个对象现有的属性，并返回这个对象。
 
@@ -37,7 +37,7 @@ Object.defineProperty(对象，属性，属性描述符) 用于在一个对象�
 ```
 **运行结果：**
 
-![02](/Users/jameswain/PROD/blog/JavaScript/Object.defineProperty/docs/02.jpg)
+![02](https://raw.githubusercontent.com/Jameswain/blog/master/JavaScript/Object.defineProperty/docs/02.jpg)
 
 ​		从运行结果可以发现，使用Object.defineProperty()定义的属性，默认是不可以被修改，不可以被枚举，不可以被删除的。可以与常规的方式定义属性对比一下：如果不使用Object.defineProperty()定义的属性，默认是可以修改、枚举、删除的：
 
@@ -51,7 +51,7 @@ Object.defineProperty(对象，属性，属性描述符) 用于在一个对象�
  console.log('删除：', obj);
 ```
 
-![03](/Users/jameswain/PROD/blog/JavaScript/Object.defineProperty/docs/03.jpg)
+![03](https://raw.githubusercontent.com/Jameswain/blog/master/JavaScript/Object.defineProperty/docs/03.jpg)
 
 
 
@@ -80,7 +80,7 @@ Object.defineProperty(对象，属性，属性描述符) 用于在一个对象�
 
 **运行结果：**
 
-![04](/Users/jameswain/PROD/blog/JavaScript/Object.defineProperty/docs/04.jpg)
+![04](https://raw.githubusercontent.com/Jameswain/blog/master/JavaScript/Object.defineProperty/docs/04.jpg)
 
 **⚠️注意：如果writable为false，configurable为true时，通过o.name = "詹姆斯-韦恩"是无法修改成功的，但是使用Object.defineProperty()修改是可以成功的代码如下：**
 
@@ -104,7 +104,7 @@ Object.defineProperty(对象，属性，属性描述符) 用于在一个对象�
   console.log('删除：', o);
 ```
 
-![05](/Users/jameswain/PROD/blog/JavaScript/Object.defineProperty/docs/05.jpg)
+![05](https://raw.githubusercontent.com/Jameswain/blog/master/JavaScript/Object.defineProperty/docs/05.jpg)
 
 **⚠️注意：如果writable和configurable都为false时，如果使用Object.defineProperty()修改属性值会报错：Cannot redefine property: name**
 
@@ -128,7 +128,7 @@ const o = {};
   console.log('删除：', o);
 ```
 
-![06](/Users/jameswain/PROD/blog/JavaScript/Object.defineProperty/docs/06.jpg)
+![06](https://raw.githubusercontent.com/Jameswain/blog/master/JavaScript/Object.defineProperty/docs/06.jpg)
 
 
 
@@ -148,7 +148,7 @@ console.log(`o.propertyIsEnumerable('trim'): `, o.propertyIsEnumerable('trim'));
 console.log(`o.propertyIsEnumerable('email'): `, o.propertyIsEnumerable('email'));
 ```
 
-![07](/Users/jameswain/PROD/blog/JavaScript/Object.defineProperty/docs/07.jpg)
+![07](https://raw.githubusercontent.com/Jameswain/blog/master/JavaScript/Object.defineProperty/docs/07.jpg)
 
 
 
@@ -183,7 +183,7 @@ console.log(`o.propertyIsEnumerable('email'): `, o.propertyIsEnumerable('email')
   console.log(o);
 ```
 
-![08](/Users/jameswain/PROD/blog/JavaScript/Object.defineProperty/docs/08.jpg)
+![08](https://raw.githubusercontent.com/Jameswain/blog/master/JavaScript/Object.defineProperty/docs/08.jpg)
 
 
 
@@ -224,6 +224,6 @@ console.log(`o.propertyIsEnumerable('email'): `, o.propertyIsEnumerable('email')
 
 **运行结果：**
 
-![09](/Users/jameswain/PROD/blog/JavaScript/Object.defineProperty/docs/09.jpg)
+![09](https://raw.githubusercontent.com/Jameswain/blog/master/JavaScript/Object.defineProperty/docs/09.jpg)
 
 ​		从运行结果中，我们可以发现profile.skills属性是一个数组，如果直接更新整个数组内容是可以驱动视图变化的，但是如果更新数组对象中的某个元素是不会触发set函数的。
