@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>set & get 数据驱动视图</title>
+</head>
+<body>
+  <div id="name"></div>
+  <div id="skills"></div>
+  <script type="text/javascript">
+    const profile = {};
+    Object.defineProperty(profile, 'name', {
+      enumerable: true,
+      configurable: true,
+      get: function () {
+        return document.querySelector('#name').innerHTML;
+      },
+      set: function (newVal) {
+        document.querySelector('#name').innerHTML = newVal;
+      }
+    });
+    Object.defineProperty(profile, 'skills', {
+      get: () => document.querySelector('#skills').innerHTML.split(','),
+      set: newVal => document.querySelector('#skills').innerHTML = newVal.toString()
+    });
+  </script>
+</body>
+</html>

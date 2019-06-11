@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>描述符</title>
+</head>
+<body>
+<script type="text/javascript">
+  const o = {};
+  Object.defineProperty(o, 'name', {
+    value: 'Jameswain',   // name属性值
+    writable: true,       // 可以被修改
+    enumerable: true,     // 可以被枚举
+    configurable: true,   // 可以被删除
+  });
+  console.log(o);
+  console.log('枚举：', Object.keys(o));
+  o.name = '詹姆斯-韦恩';
+  console.log('修改：', o);
+  Object.defineProperty(o, 'name', {
+    value: 'Po'
+  });
+  console.log('修改：', o);
+  delete o.name;
+  console.log('删除：', o);
+</script>
+</body>
+</html>

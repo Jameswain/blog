@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>默认值</title>
+</head>
+<body>
+<script type="text/javascript">
+  // Object.defineProperty(对象，属性，属性描述符)
+  var obj = {};
+  console.log('obj:', obj);
+  // 默认不可删除，不可枚举，不可修改
+  Object.defineProperty(obj, 'name', {
+    value: 'Jameswain'
+  });
+  console.log('obj默认值:', obj);
+  delete obj.name;
+  console.log('obj删除后:', obj);
+  console.log('obj枚举:', Object.keys(obj));
+  obj.name = '詹姆斯，韦恩';
+  console.log('obj修改后:', obj);
+  // 不能重新定义，会报重复定义错误: Uncaught TypeError: Cannot redefine property: name
+  Object.defineProperty(obj, 'name', {
+    value: '詹姆斯，韦恩'
+  });
+  
+  
+  // const obj = {};
+  // obj.name = 'Jameswain';
+  // console.log('枚举：', Object.keys(obj));
+  // obj.name = '詹姆斯-韦恩';
+  // console.log('修改：', obj);
+  // delete obj.name;
+  // console.log('删除：', obj);
+</script>
+</body>
+</html>

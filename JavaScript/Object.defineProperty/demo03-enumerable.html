@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>enumerable</title>
+</head>
+<body>
+<script type="text/javascript">
+  const o = {};
+  Object.defineProperty(o, 'name', { value: 'Jameswain', enumerable: true });
+  Object.defineProperty(o, 'trim', { value: (str) => { return str.trim() }, enumerable: false });
+  Object.defineProperty(o, 'email', { value: 'Jameswain@163.com' });
+  o.skill = 'node.js';
+  console.log('枚举：', Object.keys(o));
+  console.log('trim: ', o.trim('      8888       ') + '1')
+  console.log(`o.propertyIsEnumerable('name'): `, o.propertyIsEnumerable('name'));
+  console.log(`o.propertyIsEnumerable('trim'): `, o.propertyIsEnumerable('trim'));
+  console.log(`o.propertyIsEnumerable('email'): `, o.propertyIsEnumerable('email'));
+</script>
+</body>
+</html>

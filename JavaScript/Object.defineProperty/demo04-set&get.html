@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>set&get</title>
+</head>
+<body>
+<script type="text/javascript">
+  const o = {
+    __name: ''
+  };
+  Object.defineProperty(o, 'name', {
+    enumerable: true,
+    configurable: true,
+    // writable: true,    // 如果设置了get或者set，writable和value属性必须注释掉
+    // value: '',         // writable和value无法与set和get共存
+    get: function () {    // 如果设置了get 或者 set 就不能设置writable和value
+      console.log('get', this);
+      return 'My name is ' + this.__name;
+    },
+    set: function (newVal) {
+      localStorage.setItem('name', newVal);
+      console.log('set', newVal);
+      this.__name = newVal;
+    }
+  });
+  console.log(o);
+  o.name = 'Jameswain';
+  o.name;
+  console.log(o);
+  o.name = '詹姆斯-韦恩';
+  console.log(o);
+</script>
+</body>
+</html>
