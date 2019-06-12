@@ -170,6 +170,8 @@ spy-debugger -e http://127.0.0.1:8888  // 启动spy-debugger服务，并设置�
 
 ![](https://raw.githubusercontent.com/Jameswain/blog/master/spy-debugger%2BCharles%E8%BF%9B%E8%A1%8C%E7%A7%BB%E5%8A%A8%E7%AB%AF%E8%B0%83%E8%AF%95/docs/30.jpg)
 
+![](https://raw.githubusercontent.com/Jameswain/blog/master/spy-debugger%2BCharles%E8%BF%9B%E8%A1%8C%E7%A7%BB%E5%8A%A8%E7%AB%AF%E8%B0%83%E8%AF%95/docs/32.jpg)
+
 **第8步：**此时我们发现所有的请求都被转发到了Charles上
 
 ![](https://raw.githubusercontent.com/Jameswain/blog/master/spy-debugger%2BCharles%E8%BF%9B%E8%A1%8C%E7%A7%BB%E5%8A%A8%E7%AB%AF%E8%B0%83%E8%AF%95/docs/35.jpg)
