@@ -58,19 +58,19 @@ compiler.run((err, stats) => {
 
 **第三步：cd到demo02-mode文件夹下，运行node scripts/build.js**
 
-![01](https://github.com/Jameswain/blog/tree/master/webpack%404.32.2%E7%A0%94%E7%A9%B6%E7%AC%94%E8%AE%B0/demo02-mode/docs/01.png)
+![01](https://raw.githubusercontent.com/Jameswain/blog/master/webpack%404.32.2%E7%A0%94%E7%A9%B6%E7%AC%94%E8%AE%B0/demo02-mode/docs/01.png)
 
 **mode: none 打包输出的main.js文件内容**
 
-![02](https://github.com/Jameswain/blog/tree/master/webpack%404.32.2%E7%A0%94%E7%A9%B6%E7%AC%94%E8%AE%B0/demo02-mode/docs/02.png)
+![02](https://raw.githubusercontent.com/Jameswain/blog/master/webpack%404.32.2%E7%A0%94%E7%A9%B6%E7%AC%94%E8%AE%B0/demo02-mode/docs/02.png)
 
 **mode:development  打包输出的main.js文件内容**
 
-![03](https://github.com/Jameswain/blog/tree/master/webpack%404.32.2%E7%A0%94%E7%A9%B6%E7%AC%94%E8%AE%B0/demo02-mode/docs/03.png)
+![03](https://raw.githubusercontent.com/Jameswain/blog/master/webpack%404.32.2%E7%A0%94%E7%A9%B6%E7%AC%94%E8%AE%B0/demo02-mode/docs/03.png)
 
 **mode:production  打包输出的main.js文件内容**
 
-![04](https://github.com/Jameswain/blog/tree/master/webpack%404.32.2%E7%A0%94%E7%A9%B6%E7%AC%94%E8%AE%B0/demo02-mode/docs/04.png)
+![04](https://raw.githubusercontent.com/Jameswain/blog/master/webpack%404.32.2%E7%A0%94%E7%A9%B6%E7%AC%94%E8%AE%B0/demo02-mode/docs/04.png)
 
 **小结：** 可以看到每一种模式，打包后输出的代码都不一样，我们平时开发使用development模式，当代码需要发布上线时使用production模式。
 
@@ -84,12 +84,12 @@ compiler.run((err, stats) => {
 
 #### mode: development
 
-![05](https://github.com/Jameswain/blog/tree/master/webpack%404.32.2%E7%A0%94%E7%A9%B6%E7%AC%94%E8%AE%B0/demo02-mode/docs/05.png)
+![05](https://raw.githubusercontent.com/Jameswain/blog/master/webpack%404.32.2%E7%A0%94%E7%A9%B6%E7%AC%94%E8%AE%B0/demo02-mode/docs/05.png)
 
 #### mode: production
 
-![06](https://github.com/Jameswain/blog/tree/master/webpack%404.32.2%E7%A0%94%E7%A9%B6%E7%AC%94%E8%AE%B0/demo02-mode/docs/06.png)
+![06](https://raw.githubusercontent.com/Jameswain/blog/master/webpack%404.32.2%E7%A0%94%E7%A9%B6%E7%AC%94%E8%AE%B0/demo02-mode/docs/06.png)
 
 #### mode: none
 
-![07](https://github.com/Jameswain/blog/tree/master/webpack%404.32.2%E7%A0%94%E7%A9%B6%E7%AC%94%E8%AE%B0/demo02-mode/docs/07.png)
+![07](https://raw.githubusercontent.com/Jameswain/blog/master/webpack%404.32.2%E7%A0%94%E7%A9%B6%E7%AC%94%E8%AE%B0/demo02-mode/docs/07.png)
