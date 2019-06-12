@@ -1,6 +1,8 @@
 ### 简介
 ​		 mode（模式）是webpack4.0.0新增的配置，用来指定webpack使用对应模式的内置优化；它有三个可选模式：production、development、none；默认为production。
 
+[源码地址](https://github.com/Jameswain/blog/tree/master/webpack%404.32.2%E7%A0%94%E7%A9%B6%E7%AC%94%E8%AE%B0/demo02-mode)
+
 | 选项        | 描述                                                         |
 | ----------- | ------------------------------------------------------------ |
 | development | 通过DefinePlugin插件将 process.env.NODE_ENV 的值设为 development。启用 NamedChunksPlugin 和 NamedModulesPlugin。 |
@@ -8,7 +10,7 @@
 | none        | 通过DefinePlugin插件将 process.env.NODE_ENV 的值设为 node。使用默认的优化项。 |
 
 ### 演示
-下面通过一段代码分别演示一个每一个模式打包输出的文件内容：[源码地址](https://github.com/Jameswain/blog/tree/master/webpack%404.32.2%E7%A0%94%E7%A9%B6%E7%AC%94%E8%AE%B0/demo02-mode)
+下面通过一段代码分别演示一个每一个模式打包输出的文件内容：
 
 **第一步：编写入口文件和依赖代码**
 
