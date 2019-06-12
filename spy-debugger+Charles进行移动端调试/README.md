@@ -176,5 +176,5 @@ spy-debugger -e http://127.0.0.1:8888  // 启动spy-debugger服务，并设置�
 
 ![](https://raw.githubusercontent.com/Jameswain/blog/master/spy-debugger%2BCharles%E8%BF%9B%E8%A1%8C%E7%A7%BB%E5%8A%A8%E7%AB%AF%E8%B0%83%E8%AF%95/docs/35.jpg)
 
-OK，到这里spy-debugger + Charles进行移动端调试的接入流程就介绍完了，更多关于`spy-debugger`的功能和使用方法，可以参考[spy-debuger的官网README](https://www.npmjs.com/package/spy-debugger)
+OK，到这里spy-debugger + Charles进行移动端调试的接入流程就介绍完了，更多关于`spy-debugger`的功能和使用方法，可以参考[spy-debuger的官方README](https://www.npmjs.com/package/spy-debugger)
 
