@@ -5,6 +5,14 @@ const webpack = require('webpack');
 const compiler = webpack({
   mode: 'development',
   devtool: 'cheap-module-source-map',
+  module: {
+    rules: [
+      {
+        test: /\.css$/,
+        use: 'css-loader'
+      }
+    ]
+  }
 });
 
 // 启动webpack
