@@ -155,7 +155,9 @@ compiler.run((err, stats) => {
 
 ​	可以使用 [`SourceMapDevToolPlugin`](https://www.webpackjs.com/plugins/source-map-dev-tool-plugin) 插件进行更细粒度的配置。通过 [`source-map-loader`](https://www.webpackjs.com/loaders/source-map-loader) 来处理已有的 source map。
 
-​	source-map：在生产环境使用
+​	⚠️注意：devtool的默认值为false，如果传入的不是webpack的可选参数或者false会导致webpack运行报错
+
+​	source-map：在生产环境使用，但是必须需要使用SourceMapDevToolPlugin插件进行设置，并且不能使用devtool选项，需要把source-map文件发布一台内网服务器，这样只有开发人员能够看到源码映射，外网的人是无法看到的。
 
 ​	cheap-module-source-map：在开发环境使用
 
