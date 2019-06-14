@@ -2,8 +2,8 @@ const webpack = require('webpack');
 
 // 创建编译器对象
 const compiler = webpack({
-  mode: 'development',
-  devtool: 'cheap-module-source-map',
+  // mode: 'development',
+  devtool: 'cheap-module-source-map',   // 切勿同时使用 devtool 选项和 SourceMapDevToolPlugin/EvalSourceMapDevToolPlugin 插件
   // devtool: 'source-map',
   // devtool: 'eval',
   // devtool: 'cheap-eval-source-map',
@@ -23,7 +23,15 @@ const compiler = webpack({
         use: 'css-loader'
       }
     ]
-  }
+  },
+  plugins: [
+    // new webpack.SourceMapDevToolPlugin({      // 切勿同时使用 devtool 选项和 SourceMapDevToolPlugin/EvalSourceMapDevToolPlugin 插件
+    //   filename: '[name].[hash].js.map',
+    //   publicPath: 'http://127.0.0.1:9999/',
+    //   fileContext: 'public',
+    //   noSources: !true
+    // })
+  ]
 });
 
 // 启动webpack

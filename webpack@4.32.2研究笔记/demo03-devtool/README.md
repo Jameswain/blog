@@ -151,6 +151,24 @@ compiler.run((err, stats) => {
 
 可以发现如果内网服务器关闭了，Google Dev Tools就找不到main.js.map映射文件了，此时浏览器就没有源码映射了，但是也不会报错。
 
+#### 错误示范：不能同时设置devtool和SourceMapDevToolPlugin
+
+同时设置devtool和SourceMapDevToolPlugin插件
+
+![](https://raw.githubusercontent.com/Jameswain/blog/master/webpack%404.32.2%E7%A0%94%E7%A9%B6%E7%AC%94%E8%AE%B0/demo03-devtool/docs/18.jpg)
+
+**运行webpack：**
+
+![](https://raw.githubusercontent.com/Jameswain/blog/master/webpack%404.32.2%E7%A0%94%E7%A9%B6%E7%AC%94%E8%AE%B0/demo03-devtool/docs/19.jpg)
+
+打开打包出来的main.js文件，可以看到会同时设置了两个`sourceMappingURL`：
+
+![](https://raw.githubusercontent.com/Jameswain/blog/master/webpack%404.32.2%E7%A0%94%E7%A9%B6%E7%AC%94%E8%AE%B0/demo03-devtool/docs/20.jpg)这样会导致source map映射失效：
+
+![](https://raw.githubusercontent.com/Jameswain/blog/master/webpack%404.32.2%E7%A0%94%E7%A9%B6%E7%AC%94%E8%AE%B0/demo03-devtool/docs/21.jpg)
+
+如果只设置`devtool`或者`SourceMapDevToolPlugin`其中的一个，那么source map就可以正常运行了。
+
 ### 总结
 
 ​	可以使用 [`SourceMapDevToolPlugin`](https://www.webpackjs.com/plugins/source-map-dev-tool-plugin) 插件进行更细粒度的配置。通过 [`source-map-loader`](https://www.webpackjs.com/loaders/source-map-loader) 来处理已有的 source map。
