@@ -1,8 +1,8 @@
-### 简介
+# 简介
 
 ​	devtool选项用于控制是否需要生成source map，以及如何生成source map。[源码地址](https://github.com/Jameswain/blog/tree/master/webpack%404.32.2%E7%A0%94%E7%A9%B6%E7%AC%94%E8%AE%B0/demo03-devtool)
 
-#### 什么是source map？
+## 什么是source map？
 
 ​	source map 一个存储源代码与编译代码对应位置的映射信息文件，它是专门给调试器准备的，它主要用于debug，目前我所知的只有Google Dev Tools 和 Fire Fox Debugger 支持source map。
 
@@ -14,11 +14,11 @@
 
 ​	source map主要用于将压缩混淆后的JavaScript代码和CSS代码映射到源码中，方便debug调试。更多关于source map的知识，大家可以参考阮一峰大神的文章：[JavaScript Source Map 详解](http://www.ruanyifeng.com/blog/2013/01/javascript_source_map.html)
 
-### 演示
+## 演示
 
 ​	最新的webpack官网中一共有13种devtool可选模式，不同的模式打包输出的代码和source map以及构建的速度都不一样，下面我演示几种比较常用的devtool模式。
 
-#### eval
+### eval
 
 ​	表示把每一个模块文件都转换为字符串，并且在每一个模块代码的尾部添加 //# sourceURL=webpack:/// 文件名.js，并使用eval执行。
 
@@ -67,7 +67,7 @@ compiler.run((err, stats) => {
 
 ​	从浏览器的运行结果中，左侧多了一个webpack://，其实这个就是//# sourceURL设置值，如果我们在代码中修改了这个名字，那么浏览器就会显示的是另外一个名字，如果删除它，那么它的源码映射就会消失。而且它映射到的每一个源文件的头部都会加上一段webpack的代码，这对于我们来说并不友好，这种模式我使用的频率相当少。
 
-#### cheap-module-source-map
+### cheap-module-source-map
 
 ​	没有列映射的source map，同时loader的source map也会被简化为每行一个映射，这个配置比较适合在开发环境使用，react脚手架开发模式下也是使用这个配置。
 
@@ -102,7 +102,7 @@ body {
 
 
 
-#### source-map
+### source-map
 
 ​	source-map 适合在生产环境中使用，它会生成一个源代码对应的.map文件，这个文件描述的打包后的代码和源代码的映射关系。代码上线时不能把这个文件上传到线上服务器，可以把它上传到一个只可以内网访问服务器上，这样只要你是在公司内网环境内就可以很方便的进行线上问题定位。
 
@@ -151,7 +151,7 @@ compiler.run((err, stats) => {
 
 可以发现如果内网服务器关闭了，Google Dev Tools就找不到main.js.map映射文件了，此时浏览器就没有源码映射了，但是也不会报错。
 
-#### 错误示范：不能同时设置devtool和SourceMapDevToolPlugin
+### 错误示范：不能同时设置devtool和SourceMapDevToolPlugin
 
 同时设置devtool和SourceMapDevToolPlugin插件
 
@@ -169,7 +169,7 @@ compiler.run((err, stats) => {
 
 如果只设置`devtool`或者`SourceMapDevToolPlugin`其中的一个，那么source map就可以正常运行了。
 
-### 总结
+# 总结
 
 ​	可以使用 [`SourceMapDevToolPlugin`](https://www.webpackjs.com/plugins/source-map-dev-tool-plugin) 插件进行更细粒度的配置。通过 [`source-map-loader`](https://www.webpackjs.com/loaders/source-map-loader) 来处理已有的 source map。
 
