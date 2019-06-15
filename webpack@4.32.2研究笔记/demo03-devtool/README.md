@@ -151,6 +151,27 @@ compiler.run((err, stats) => {
 
 可以发现如果内网服务器关闭了，Google Dev Tools就找不到main.js.map映射文件了，此时浏览器就没有源码映射了，但是也不会报错。
 
+
+
+### nosources-source-map 
+
+​		nosources-source-map会生成一个没有源码的source map映射，仅仅可以用来映射浏览器上的堆栈跟踪，而不会暴露源码，这配置选项也很适用生产环境。例如：当你线上环境的代码如果出问题了，报错信息能够告诉我是在哪个文件的哪一行出现问题了，但是我又不想把我的源码暴露出去，就可以使用这种模式。
+
+**第一步：将devtool修改为nosources-source-map**
+
+![](https://raw.githubusercontent.com/Jameswain/blog/master/webpack%404.32.2%E7%A0%94%E7%A9%B6%E7%AC%94%E8%AE%B0/demo03-devtool/docs/22.jpg)
+
+**第二步：在role.js文件里制作一个错误**
+
+![](https://raw.githubusercontent.com/Jameswain/blog/master/webpack%404.32.2%E7%A0%94%E7%A9%B6%E7%AC%94%E8%AE%B0/demo03-devtool/docs/24.jpg)
+
+**第三步：浏览运行**
+
+![](https://raw.githubusercontent.com/Jameswain/blog/master/webpack%404.32.2%E7%A0%94%E7%A9%B6%E7%AC%94%E8%AE%B0/demo03-devtool/docs/23.jpg)
+
+​		从运行结果可以发现，报错信息详细的描述了是我哪个源码文件的第几行报错了，但是浏览器却看不到任何的源码。
+
+
 ### 错误示范：不能同时设置devtool和SourceMapDevToolPlugin
 
 同时设置devtool和SourceMapDevToolPlugin插件
@@ -175,9 +196,11 @@ compiler.run((err, stats) => {
 
 ​	⚠️注意：devtool的默认值为false，如果传入的不是webpack的可选参数或者false会导致webpack运行报错
 
-​	source-map：在生产环境使用，但是必须需要使用SourceMapDevToolPlugin插件进行设置，并且不能使用devtool选项，需要把source-map文件发布一台内网服务器，这样只有开发人员能够看到源码映射，外网的人是无法看到的。
+​	**source-map：**在生产环境使用，但是必须需要使用SourceMapDevToolPlugin插件进行设置，并且不能使用devtool选项，需要把source-map文件发布一台内网服务器，这样只有开发人员能够看到源码映射，外网的人是无法看到的。
 
-​	cheap-module-source-map：在开发环境使用
+​	**nosources-source-map：**在生产环境使用，这个选项只有堆栈的映射跟踪，不会暴露源码，方便错误定位。优点是：不需要建立和部署内网的source map服务器，缺点是：无法直接线上debug源码。
+
+​	**cheap-module-source-map：**在开发环境使用
 
 ![17](https://raw.githubusercontent.com/Jameswain/blog/master/webpack%404.32.2%E7%A0%94%E7%A9%B6%E7%AC%94%E8%AE%B0/demo03-devtool/docs/17.jpg)
 
