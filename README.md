@@ -9,3 +9,7 @@
 [spy-debugger+Charles进行移动端调试](https://github.com/Jameswain/blog/tree/master/spy-debugger%2BCharles%E8%BF%9B%E8%A1%8C%E7%A7%BB%E5%8A%A8%E7%AB%AF%E8%B0%83%E8%AF%95)
 
 [CSS3-Effect](https://github.com/Jameswain/blog/tree/master/CSS3-Effect)
+
+[修改npm全局包安装的位置](https://github.com/Jameswain/blog/tree/master/Node/npm/%E4%BF%AE%E6%94%B9npm%E5%85%A8%E5%B1%80%E5%8C%85%E5%AE%89%E8%A3%85%E7%9A%84%E4%BD%8D%E7%BD%AE)
+
+[Object.defineProperty](https://github.com/Jameswain/blog/tree/master/JavaScript/Object.defineProperty)
