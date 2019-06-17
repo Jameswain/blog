@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>函数的4种定义方式</title>
+</head>
+<body>
+<script type="text/javascript">
+  // 函数的第一种定义方式
+  function sum1(x, y) {
+    return x + y;
+  }
+  console.log('sum1：', sum1)
+  console.log(sum1(10, 120));
+  
+  // 函数的第二种定义方式
+  const sum2 = function(x, y) {
+    return x + y;
+  }
+  console.log('sum2：', sum2)
+  console.log(sum2(10, 120));
+
+  // 函数的第三种定义方式
+  const sum3 = (x, y) => {
+    return x + y;
+  }
+  console.log('sum3：', sum3)
+  console.log(sum3(10, 120));
+  
+  // 函数的第四种定义方式
+  const sum4 = new Function('x', 'y', 'return x + y');
+  console.log('sum4：', sum4);
+  console.log(sum4(100, 200));
+</script>
+</body>
+</html>
