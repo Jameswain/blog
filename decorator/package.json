@@ -3,14 +3,22 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "demo01": "babel src/demo01.js -d dist && node dist/demo01.js",
+    "demo02": "babel src/demo02.js -d dist && node dist/demo02.js",
+    "demo03": "babel src/demo03.js -d dist && node dist/demo03.js",
+    "demo04": "babel src/demo04.js -d dist && node dist/demo04.js",
+    "demo05": "babel src/demo05.js -d dist && node dist/demo05.js",
+    "demo06": "node src/demo06.js",
+    "demo07": "node src/demo07.js",
+    "demo08": "babel src/demo08.js -d dist && node dist/demo08.js"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@babel/cli": "^7.14.3",
     "@babel/core": "^7.14.3",
-    "@babel/plugin-proposal-decorators": "^7.14.2",
-    "@babel/preset-env": "^7.14.2"
+    "@babel/plugin-proposal-decorators": "^7.14.2"
   }
 }
