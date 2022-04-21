@@ -1,0 +1,35 @@
+<!-- example/demo04-iframe-async/iframe.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>我是iframe页面</title>
+    <style>
+        body {
+            text-align: center;
+        }
+        h4 {
+            text-align: center;
+        }
+        #text {
+            width: 100%;
+        }
+        #send-data {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h4>发布者：我是iframe，用React编写的</h4>
+    <textarea id="text" rows="4" ></textarea>
+    <button id="send-data">发送数据到主index.html页面中</button>
+    <script>
+        const text = document.querySelector('#text');
+        const btnSendData = document.querySelector('#send-data');
+        btnSendData.addEventListener('click', () => {
+            const content = text.value;
+            top.document.dispatchEvent(new CustomEvent('iframe-data', { detail: { content } }));
+        });
+    </script>
+</body>
+</html>

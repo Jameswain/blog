@@ -1,0 +1,52 @@
+<!--  example/demo04-iframe-async/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>主页面</title>
+    <style>
+        .main {
+            width: 100%;
+            border: 1px solid black;
+            text-align: center;
+        }
+
+        .iframe {
+            text-align: center;
+            margin-top: 100px;
+            width: 100%;
+            border: 1px dotted orange;
+        }
+        .iframe iframe {
+            width: 100%;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <h4>订阅者：我是主页面index，用Vue写的，content元素10秒后才会被插入</h4>
+        <p>以下内容是从iframe中通过发布订阅模式传递过来的：</p>
+    </div>
+    <div class="iframe">
+        <iframe src="iframe.html"></iframe>
+    </div>
+    <script>
+        const insertReault = new Promise(resolve => {
+            // 10秒以后才会插入元素
+            setTimeout(() => {
+                const content = document.createElement('div');
+                content.setAttribute('id', 'content');
+                document.querySelector('.main').appendChild(content);
+                resolve();
+            }, 10 * 1000);
+        });
+        document.addEventListener('iframe-data', async (e) => {
+            // 等content元素插入后，再更新内容
+            await insertReault;
+            const content = document.querySelector('#content');
+            content.innerHTML = e.detail.content;
+        });
+    </script>
+</body>
+</html>

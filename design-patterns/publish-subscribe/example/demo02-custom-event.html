@@ -1,0 +1,27 @@
+<!-- example/demo02-custom-event.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>发布订阅 - 浏览器自定义事件</title>
+</head>
+<body>
+  <script>
+    document.addEventListener('jameswain', function (e) {
+      console.log('事件触发了', e, this);
+    });
+
+    document.addEventListener('jameswain', function (e) {
+      console.log('第二次订阅，事件触发了', e, this);
+    });
+
+
+    // 控制台调用此函数触发
+    function triggrtCustomEvent() {
+      // 触发事件
+      const event = new CustomEvent('jameswain', { detail: { tips: '我是事件自定义参数', age: 18 } });
+      document.dispatchEvent(event);
+    }
+  </script>
+</body>
+</html>

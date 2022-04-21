@@ -1,0 +1,42 @@
+<!-- example/demo03-iframe/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>主页面</title>
+    <style>
+        .main {
+            width: 100%;
+            border: 1px solid black;
+            text-align: center;
+        }
+
+        .iframe {
+            text-align: center;
+            margin-top: 100px;
+            width: 100%;
+            border: 1px dotted orange;
+        }
+        .iframe iframe {
+            width: 100%;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <h4>我是主页面index</h4>
+        <p>以下内容是从iframe中通过发布订阅模式传递过来的：</p>
+        <div id="content"></div>
+    </div>
+    <div class="iframe">
+        <iframe src="iframe.html"></iframe>
+    </div>
+    <script>
+        const content = document.querySelector('#content');
+        document.addEventListener('iframe-data', (e) => {
+            content.innerHTML = e.detail.content;
+        });
+    </script>
+</body>
+</html>

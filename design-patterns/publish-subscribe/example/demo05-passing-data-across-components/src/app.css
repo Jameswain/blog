@@ -1,0 +1,39 @@
+* {
+  text-align: center;
+}
+.row {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.col {
+  min-width: 180px;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+  background-color: hotpink;
+  color: white;
+  margin: 3px;
+  position: relative;
+}
+
+.huangdi {
+  background-color: orange !important;
+  height: 50px;
+  line-height: 50px;
+  font-size: 25px;
+}
+.shengzhi {
+  font-size: 10px;
+  position: absolute;
+  right: 25px;
+  cursor: pointer;
+}
+.shangzouze {
+  font-size: 10px;
+  right: 25px;
+  cursor: pointer;
+  position: absolute;
+  right: 5px;
+}
