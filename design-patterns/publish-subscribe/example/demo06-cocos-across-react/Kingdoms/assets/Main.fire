@@ -435,7 +435,7 @@
         "__id__": 10
       }
     ],
-    "_active": true,
+    "_active": false,
     "_components": [
       {
         "__id__": 15
@@ -820,7 +820,7 @@
         "__id__": 18
       }
     ],
-    "_active": true,
+    "_active": false,
     "_components": [
       {
         "__id__": 23
@@ -1280,7 +1280,7 @@
     "node": {
       "__id__": 2
     },
-    "_enabled": true,
+    "_enabled": false,
     "_clip": {
       "__uuid__": "06f5eec7-2fd2-4b0d-8427-0f6d8530a781"
     },

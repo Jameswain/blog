@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>demo07-cross-platform-bridge</title>
+  <style>
+    * {
+      padding: 0px;
+      margin: 0px;
+    }
+    button {
+      width: 100%;
+      height: 50px;
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+  <h1>我是html页面</h1>
+  <button id="btnCallBridge">调用客户端的shake函数</button>
+  <script>
+    /**
+     * 客户端 调 前端的函数
+     */
+    function callJs(...args) {
+      console.log('args: ', args);
+      alert('Andorid 调用了JS的callJs函数');
+      return {
+        msg: '前端返回值',
+        name: '温大西'
+      }
+    }
+
+    const btnCallBridge = document.querySelector('#btnCallBridge');
+    btnCallBridge.addEventListener('click', () => {
+      const result = window.bridge.shake('你好阿，Android');  // 客户端返回的是字符串
+      console.log('result: ', result);
+      console.log(typeof result)
+    });
+  </script>
+</body>
+</html>
